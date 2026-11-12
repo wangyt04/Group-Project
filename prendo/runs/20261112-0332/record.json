@@ -5,9 +5,9 @@
   "train_command": "python train_viewdir.py --model_path /rds/general/user/yl15425/ephemeral/prendo/runs/vrcaps_lumen_100_v2_r30k -s /rds/general/user/yl15425/ephemeral/prendo/data/VRCaps_lumen_100_v2 --eval --resolution 1 --iteration 30000 --lambda_depth 0.2 --lambda_norm 0.1 --albedo_loss_weight 1.0 --densification_interval 1000 --opacity_reset_interval 3000 --densify_until_iter 10000 --densify_from_iter 1000 --mlp_lr 0.0005 --grid_lr 0.0005 --end_diffuse_loss_iter 20000 --port 6000 --K_normals 30 --diffuse_loss_weight 0.01",
   "iteration": 30000,
   "depth_scale": 1.0,
-  "spot_power": null,
+  "spot_power": 23.13538193587864,
   "train_psnr": 34.78707311370156,
   "train_ssim": 0.9885698360475627,
   "train_lpips": 0.05804164241999388,
-  "notes": "B1 configuration: VRCaps_lumen_100_v2_relight_config | valid frame entries in B1: 671; invalid skipped: 73 | rendered this run: 391; total PNG pairs in output: 391 | shadow/noshadow variants merged: one image per (config, frame) | mask companion not applied; masks are not used by the reader | test depth is an internal placeholder, not test ground truth | physical/numerical scale unverified; mm_per_unit is null | L2 skipped: spot_power_n is null (entries skipped: 280)"
+  "notes": "B1 configuration: VRCaps_lumen_100_v2_relight_config | valid frame entries in B1: 671; invalid skipped: 73 | rendered this run: 280; total PNG pairs in output: 671 | shadow/noshadow variants merged: one image per (config, frame) | mask companion not applied; masks are not used by the reader | test depth is an internal placeholder, not test ground truth | physical/numerical scale unverified; mm_per_unit is null | L2 rendered with spot_power_n=23.13538193587864"
 }
