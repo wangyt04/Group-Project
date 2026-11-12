@@ -109,11 +109,19 @@ cd Group-Project/relight_eval   # 或你本地仓库的对应路径
 - L1 线性关系、L4 颜色倍数（完整 B2）；
 - `L0` / `L2_fwd` 标定帧的曝光和光强一致；
 - 训练 PNG 与线性 EXR 编码一致；
-- 过曝像素 < 1%；
+- 过曝像素 < 1%（仅针对 **A 训练 PNG**；B2 线性 EXR 见下）；
 - L3 的 `shadow` 不比 `noshadow` 亮；
 - `lights.json` 每个 `valid=true` 条目都有对应 EXR；
 - 帧号、相机矩阵与 `transforms_relight.json` 一致；
 - `export_settings.json` 填写完整，并更新 B2 的实际设置（阴影、聚光角、深度通道等）。
+
+### 关于高光/过曝
+
+- **`过曝 < 1%` 只适用于 A 训练 PNG**（8-bit + clamp）。B2 的 `relight/gt/*.exr` 是线性 HDR，高光 >1 是正常物理现象，不要 clamp、不要 tonemap、不要用训练 PNG 的编码。
+- 如果**把 B2 EXR 转成 PNG 预览**时看到高光截断，这是预览转换造成的，不影响 EXR 数据；交付请用 EXR。
+- 如果 **EXR 本身** max=1 且大量像素=1，才是渲染/导出被 clamp，需要检查 AOV/EXR 导出。
+- `fit_spot_power.py` 会排除饱和像素；`compare.py` 用线性 EXR。B2 中部分帧高光超过 1%（例如 L1_s2.0、L4）是预期的。
+- V2 的 A 训练 PNG 已记录最大过曝比例 0.1189%，低于 1%；如果现在看到 25 张超过 1%，先确认它们是 B2 EXR 还是 A PNG。
 
 ## 5. 交付方式
 
