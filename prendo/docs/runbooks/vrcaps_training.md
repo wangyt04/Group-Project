@@ -90,7 +90,7 @@ Do not change hyperparameters when resuming. Record the interruption and resumed
 - Rendered: 391 valid non-L2 `(config, frame)` pairs (PNG + EXR)
 - Training-frame metrics used in `record.json`: PSNR 34.787, SSIM 0.9886, LPIPS 0.0580 (88 views)
 - Output bundle: `pred_VRCaps_lumen_100_v2_20261112-0332.tar.gz`, 1.8 GB
-- Output bundle sha256: `a228a901ecc4de6b33b594a86499224159e84c369a96aec620bedf10a1de3f46`
+- Output bundle sha256: `ffccc7ea23fb5096f09a90f6c7864cb0c209a5c11405cc480bd1d47ae9e6f36f`
 - Local extracted path: `artifacts/pred_VRCaps_lumen_100_v2_20261112-0332/`
 - PNG: display-space RGB8; EXR: linear RGB float16. Smoke check max PNG-vs-EXR difference 3.9e-3 (8-bit/half quantization).
 - L2 is pending `spot_power_n` from Yutong: 280 valid entries; current `record.json` has `spot_power=null` and notes L2 pending.

@@ -1,7 +1,7 @@
 {
   "dataset": "VRCaps_lumen_100_v2",
   "prendo_commit": "ee5362817ccc944292ae43aa9f667386a5ebc069",
-  "code_commit": "d2a6e4422add68f3441a0a3da3e60d5a406d625a",
+  "code_commit": "https://github.com/wangyt04/Group-Project@a13e272206e0477fc380b5500363f96d2995a33e",
   "train_command": "python train_viewdir.py --model_path /rds/general/user/yl15425/ephemeral/prendo/runs/vrcaps_lumen_100_v2_r30k -s /rds/general/user/yl15425/ephemeral/prendo/data/VRCaps_lumen_100_v2 --eval --resolution 1 --iteration 30000 --lambda_depth 0.2 --lambda_norm 0.1 --albedo_loss_weight 1.0 --densification_interval 1000 --opacity_reset_interval 3000 --densify_until_iter 10000 --densify_from_iter 1000 --mlp_lr 0.0005 --grid_lr 0.0005 --end_diffuse_loss_iter 20000 --port 6000 --K_normals 30 --diffuse_loss_weight 0.01",
   "iteration": 30000,
   "depth_scale": 1.0,

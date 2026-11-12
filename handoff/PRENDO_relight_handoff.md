@@ -5,7 +5,7 @@
 | File | Contents | Size | SHA256 |
 |---|---|---|---|
 | `vrcaps_lumen_100_v2_r30k_bundle.tar.gz` | V2 training run: model, checkpoints, test renders, metrics, manifest | 337 MB | `bb314d69ed15385615bf1fbe232bae679010bcf98cb75dd7cd8e5b5a2bfaeb93` |
-| `pred_VRCaps_lumen_100_v2_20261112-0332.tar.gz` | Non-L2 relight predictions + `record.json` / `render_manifest.json` / `train_metrics.json` | 1.8 GB | `a228a901ecc4de6b33b594a86499224159e84c369a96aec620bedf10a1de3f46` |
+| `pred_VRCaps_lumen_100_v2_20261112-0332.tar.gz` | Non-L2 relight predictions + `record.json` / `render_manifest.json` / `train_metrics.json` | 1.8 GB | `ffccc7ea23fb5096f09a90f6c7864cb0c209a5c11405cc480bd1d47ae9e6f36f` |
 
 `pred_VRCaps_lumen_100_v2_20261112-0332/` contains:
 
@@ -21,7 +21,7 @@ train_metrics.json
 
 - Dataset: `VRCaps_lumen_100_v2` (point-light training data; 88 train / 12 test).
 - Base PR-ENDO commit: `ee5362817ccc944292ae43aa9f667386a5ebc069`.
-- Code commit used for relight rendering: `d2a6e4422add68f3441a0a3da3e60d5a406d625a` (branch `vrcaps-reader`).
+- Code commit: `https://github.com/wangyt04/Group-Project@a13e272206e0477fc380b5500363f96d2995a33e` (the `prendo/` code snapshot; the underlying PR-ENDO branch commit used for rendering is `d2a6e4422add68f3441a0a3da3e60d5a406d625a`).
 - Iteration: 30,000; resolution 1 (1350×1080); 213,091 Gaussians.
 - Training-frame metrics: PSNR **34.787**, SSIM **0.9886**, LPIPS **0.0580** (88 views).
 - Test-frame metrics: PSNR **33.64**, SSIM **0.99**, LPIPS **0.06** (12 held-out views).

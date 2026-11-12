@@ -2,6 +2,12 @@
 
 This folder contains the PR-ENDO-side code, HPC pipeline, run metadata and B1 configuration snapshot used for the VRCaps relighting handoff. Image data, checkpoints and bundles are delivered separately via OneDrive; they are not stored in this repository.
 
+## Code commit
+
+- Group-Project code snapshot: `a13e272206e0477fc380b5500363f96d2995a33e`
+- `runs/20261112-0332/record.json` records `code_commit` as `https://github.com/wangyt04/Group-Project@a13e272206e0477fc380b5500363f96d2995a33e`
+- Underlying PR-ENDO branch commit used for rendering: `d2a6e4422add68f3441a0a3da3e60d5a406d625a`
+
 ## Official base
 
 - Repository: `https://github.com/SanoScience/PR-ENDO`
