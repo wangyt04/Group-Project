@@ -4,6 +4,15 @@ This small package supplies lighting metadata for the completed v2 training
 baseline. It contains no RGB, EXR reference images or reference depths. The
 existing `VRCaps_lumen_100_v2` directory and its training ZIP are unchanged.
 
+> **Status update (2026-11-12).** Yutong's B2 reference calibration has since
+> confirmed the 60° full cone and fitted `n = 23.13538193587864` (RMSE 0.019458).
+> `prendo/runs/20261112-0332/` uses that value for 280 L2 entries, giving 671
+> valid `(config, frame)` pairs in total. The `provisional` / `pending` / `null`
+> status strings inside `relight/lights.json` and `relight/export_settings.json`
+> are export-time provenance and were intentionally left unchanged; the final
+> values are recorded in `prendo/runs/20261112-0332/calibration/calibration.json`
+> and `record.json`.
+
 ## Use and contents
 
 Read `relight/lights.json`, `relight/transforms_relight.json` and

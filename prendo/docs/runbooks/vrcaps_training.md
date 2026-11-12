@@ -4,8 +4,9 @@
 
 - code: `$HOME/prendo/code/PR-ENDO`
 - env: `$HOME/prendo/envs/prendo` (created by `hpc/env_build.pbs`)
-- data: `/rds/general/user/yl15425/ephemeral/prendo/data/VRCaps_lumen_100`
-- run: `/rds/general/user/yl15425/ephemeral/prendo/runs/vrcaps_lumen_100_r30k`
+- data: `/rds/general/user/yl15425/ephemeral/prendo/data/VRCaps_lumen_100_v2` (`hpc/train.env`)
+- run: `/rds/general/user/yl15425/ephemeral/prendo/runs/vrcaps_lumen_100_v2_r30k` (`hpc/train.env`)
+- `hpc/paths.sh` still carries the V1 defaults (`VRCaps_lumen_100` / `vrcaps_lumen_100_r30k`); `hpc/train.env` overrides them for the v2 runs.
 - artifacts: `$HOME/prendo/artifacts`
 - logs: `$HOME/prendo/logs`
 
@@ -83,26 +84,26 @@ Do not change hyperparameters when resuming. Record the interruption and resumed
 - Manifest: 80 outputs; all 80 hashes verified
 - Local extracted path: `artifacts/vrcaps_lumen_100_v2_r30k/`
 
-## Relight B1 non-L2 run record: 2026-11-12
+## Relight B1 run record: 2026-11-12
 
 - B1: `VRCaps_lumen_100_v2_relight_config` (25 configs, 49 cameras, 744 entries, 671 valid, 73 invalid L3)
-- Relight job: `4617744.pbs-7`; run id `20261112-0332`
-- Rendered: 391 valid non-L2 `(config, frame)` pairs (PNG + EXR)
+- Relight jobs: `4617744.pbs-7` (391 non-L2 entries) + `4626486.pbs-7` (280 L2-only entries); run id `20261112-0332`
+- Rendered: 671 valid `(config, frame)` pairs (391 non-L2 + 280 L2; PNG + EXR)
 - Training-frame metrics used in `record.json`: PSNR 34.787, SSIM 0.9886, LPIPS 0.0580 (88 views)
-- Output bundle: `pred_VRCaps_lumen_100_v2_20261112-0332.tar.gz`, 1.8 GB
-- Output bundle sha256: `ffccc7ea23fb5096f09a90f6c7864cb0c209a5c11405cc480bd1d47ae9e6f36f`
+- Output bundle: `pred_VRCaps_lumen_100_v2_20261112-0332.tar.gz`, 2.6 GB
+- Output bundle sha256: `668b8622158b9b6abdfad09950914e6ced0df42efb74a08da5f49268165e13e4`
 - Local extracted path: `artifacts/pred_VRCaps_lumen_100_v2_20261112-0332/`
 - PNG: display-space RGB8; EXR: linear RGB float16. Smoke check max PNG-vs-EXR difference 3.9e-3 (8-bit/half quantization).
-- L2 is pending `spot_power_n` from Yutong: 280 valid entries; current `record.json` has `spot_power=null` and notes L2 pending.
+- L2 completed with `n=23.13538193587864` (fit RMSE 0.019458); `record.json` has `spot_power=23.13538193587864` and total 671. Calibration artifacts: `prendo/runs/20261112-0332/calibration/`.
 - L2-only command:
 
 ```bash
 qsub -l walltime=04:00:00 \
-  -v RELIGHT_RUN_ID=20261112-0332,LEVELS=L2,SPOT_POWER_N=<n>,SKIP_TRAIN_METRICS=1,CODE_COMMIT=<commit> \
+  -v RELIGHT_RUN_ID=20261112-0332,LEVELS=L2,SPOT_POWER_N=23.13538193587864,SKIP_TRAIN_METRICS=1,CODE_COMMIT=https://github.com/wangyt04/Group-Project@a13e272206e0477fc380b5500363f96d2995a33e \
   hpc/relight.pbs
 ```
 
-- Handoff description: `docs/handoff/PRENDO_relight_handoff.md`
+- Handoff description: `handoff/PRENDO_relight_handoff.md` (repo root)
 
 ### Relight implementation notes
 
@@ -111,3 +112,4 @@ qsub -l walltime=04:00:00 \
 - Color scale is applied outside `compute_lighted_rgb` in linear space.
 - EXR writing requires `np.ascontiguousarray` on each R/G/B slice; otherwise the OpenEXR binding mixes channels.
 - `shadow`/`noshadow` variants are merged: one image per `(config, frame)`.
+- `render_manifest.json` records `Path.resolve()` output; `/rds/general/ephemeral/user/yl15425/ephemeral` is the canonical target of the `/rds/general/user/yl15425/ephemeral` symlink, so both spellings name the same area.

@@ -4,10 +4,10 @@
 
 - **A 训练数据**：已收到 `VRCaps_lumen_100_v2`。
 - **B1 光照参数**：已收到 `VRCaps_lumen_100_v2_relight_config`（`lights.json`、`transforms_relight.json`、`export_settings.json`）。
-- **B2 多光照 GT + 深度**：**尚未收到** `relight/gt/` 和 `relight/depth/`。
+- **B2 多光照 GT + 深度**：已于 2026-11-12 收到完整包（863 张 GT EXR + 49 张 depth EXR）。
 - 按《对接说明：给负责 VR-Caps 的组员》第 2 节，**完整 B2** 是 VRCaps 组员的明确交付项，**只交给 Yutong**，不交给 PRENDO。
 - PRENDO 渲染不需要完整 B2；PRENDO 需要的是 **聚光衰减指数 `n`**。
-- `n` 由 Yutong 用 B2 的标定帧拟合；如果 PRENDO 侧代跑 `fit_spot_power.py`，只需要 B2 的 **15 个标定 EXR**，仍然不需要完整 B2。
+- **状态更新（2026-11-12）**：`n` 已用 5 个 B2 标定帧拟合为 **23.13538193587864**（RMSE 0.019458）；PRENDO 的 L2 280 张已渲染完成，交付共 **671 张**。以下 §1–§5 保留作为数据与拟合流程的记录。
 
 ## 1. 对接说明的要求
 
@@ -15,8 +15,8 @@
 | --- | --- | --- | --- |
 | A | 训练 RGB、深度、位姿 | PRENDO 组员 | 已收 |
 | B1 | 选帧、光照配置、每帧光源位姿 | PRENDO + Yutong | 已收 |
-| B2 | 多光照 GT 图像 + 深度（完整） | **只给 Yutong** | **缺失** |
-| B2 标定子集 | 5 帧 × L0/L2_fwd + depth，共 15 个 EXR | Yutong，或 PRENDO 侧代拟合 `n` | **缺失** |
+| B2 | 多光照 GT 图像 + 深度（完整） | **只给 Yutong** | 已收（2026-11-12） |
+| B2 标定子集 | 5 帧 × L0/L2_fwd + depth，共 15 个 EXR | Yutong，或 PRENDO 侧代拟合 `n` | 已收并拟合 `n` |
 
 15 个标定 EXR 是 B2 的子集，只用于拟合 `n`；它不改变“完整 B2 只给 Yutong”的约定。
 
@@ -132,4 +132,4 @@ cd Group-Project/relight_eval   # 或你本地仓库的对应路径
 
 ## 6. 为什么 PRENDO 需要 `n`
 
-PRENDO 的 L2 聚光灯按 `cos(θ)^n` 衰减；`n` 必须来自 Unity 聚光灯的真实 falloff。B1 里 `spot_power_n` 是 `null`，不能用猜测值。拿到 `n` 后 PRENDO 才能补 L2 的 280 张，把当前 391 张补成完整的 671 张。
+PRENDO 的 L2 聚光灯按 `cos(θ)^n` 衰减；`n` 必须来自 Unity 聚光灯的真实 falloff。B1 里 `spot_power_n` 原为 `null`。**2026-11-12 已拟合 `n = 23.13538193587864` 并完成 L2 的 280 张渲染，交付从 391 张补齐为 671 张。**

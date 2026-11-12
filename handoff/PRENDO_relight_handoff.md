@@ -5,7 +5,7 @@
 | File | Contents | Size | SHA256 |
 |---|---|---|---|
 | `vrcaps_lumen_100_v2_r30k_bundle.tar.gz` | V2 training run: model, checkpoints, test renders, metrics, manifest | 337 MB | `bb314d69ed15385615bf1fbe232bae679010bcf98cb75dd7cd8e5b5a2bfaeb93` |
-| `pred_VRCaps_lumen_100_v2_20261112-0332.tar.gz` | Non-L2 relight predictions + `record.json` / `render_manifest.json` / `train_metrics.json` | 1.8 GB | `ffccc7ea23fb5096f09a90f6c7864cb0c209a5c11405cc480bd1d47ae9e6f36f` |
+| `pred_VRCaps_lumen_100_v2_20261112-0332.tar.gz` | Full relight predictions (671 entries: 391 non-L2 + 280 L2) + `record.json` / `render_manifest.json` / `train_metrics.json` | 2.6 GB | `668b8622158b9b6abdfad09950914e6ced0df42efb74a08da5f49268165e13e4` |
 
 `pred_VRCaps_lumen_100_v2_20261112-0332/` contains:
 
@@ -34,41 +34,25 @@ Source: `VRCaps_lumen_100_v2_relight_config` (B1 only; no B2 images).
 - 49 unique relight cameras, all from the 88 training frames; no held-out camera selected.
 - 744 `(config, frame)` entries; 73 invalid L3 entries marked `valid=false`.
 - 671 valid entries; 1009 planned B2 variant paths; 863 eligible after validity filtering.
-- L2 spot angles: outer half-angle 30° (Unity full 60°), inner half-angle 0° (HDRP innerSpotPercent=0); provisional pending Yutong's FOV/cone confirmation.
+- L2 spot angles: outer half-angle 30° (Unity full 60°), inner half-angle 0° (HDRP innerSpotPercent=0); confirmed for this delivery (used for the B2 reference renders).
 
 ## 4. What is in this delivery
 
-Current `pred_..._20261112-0332` contains **391 non-L2 valid entries**:
+`pred_VRCaps_lumen_100_v2_20261112-0332/` contains **671 valid entries**:
 
 - L0, L1_s0.5, L1_s2.0
+- L2_fwd, L2_yaw±10/±20/±40, L2_pitch±20
 - L3_f+0.25, L3_f-0.25, L3_r0.10, L3_r0.25, L3_r0.50, L3_u0.25
 - L4_red, L4_green, L4_blue
 - L5_seg1, L5_seg2
 
-`L3_u0.50` and `L3_r1.00` have no valid entries (all frames failed the geometry validity check). `L2` is not rendered yet.
+`L3_u0.50` and `L3_r1.00` have no valid entries (all frames failed the geometry validity check). `record.json` has `spot_power=23.13538193587864`, `iteration=30000`, train metrics PSNR 34.787 / SSIM 0.9886 / LPIPS 0.0580, and total 671 PNG+EXR pairs.
 
-`record.json` currently has `spot_power: null` and a note that L2 is pending.
+## 5. L2 calibration and completion
 
-## 5. Pending: L2 (280 entries)
+L2's 280 entries were rendered with **n=23.13538193587864**, fitted from the B2 calibration frames `0001, 0032, 0050, 0067, 0097` (L0 and L2_fwd noshadow + depth). Fit RMSE is 0.019458; see `prendo/runs/20261112-0332/calibration/spot_fit.png`.
 
-L2 needs Yutong's fitted spotlight exponent `n`. The B1 `lights.json` has `spot_power_n: null`; do not guess it.
-
-When `n` is available, run an L2-only job **into the same run folder**:
-
-```bash
-qsub -l walltime=04:00:00 \
-  -v RELIGHT_RUN_ID=20261112-0332,LEVELS=L2,SPOT_POWER_N=<n>,SKIP_TRAIN_METRICS=1,CODE_COMMIT=<code_commit> \
-  hpc/relight.pbs
-```
-
-The script will:
-
-- load the existing `train_metrics.json`;
-- render the 280 L2 valid entries into the same `pred_VRCaps_lumen_100_v2_20261112-0332/`;
-- overwrite `record.json` with `spot_power=n` and total count 671;
-- regenerate the bundle and `.sha256`.
-
-After that, download and verify the updated bundle; the complete handoff is 671 PNG+EXR pairs.
+The HDRP spotlight is not an exact `cos^n`; the measured profile differs somewhat from the fitted curve, so L2 comparisons should be interpreted with this approximation. The final bundle is 2.6 GB with sha256 `668b8622158b9b6abdfad09950914e6ced0df42efb74a08da5f49268165e13e4`; `record.json` records the completed total of 671.
 
 ## 6. Notes
 

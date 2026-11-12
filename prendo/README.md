@@ -53,7 +53,7 @@ The HPC scripts contain the Imperial CX3 paths for user `yl15425` (`hpc/paths.sh
 - Training data: `VRCaps_lumen_100_v2` (point-light training data, 88 train / 12 test).
 - B1 configuration: `VRCaps_lumen_100_v2_relight_config` (25 configs, 49 relight cameras, 744 `(config, frame)` entries, 671 valid, 73 invalid L3).
 - Training: 30,000 iterations, resolution 1, 213,091 Gaussians. Test metrics: PSNR 33.64 / SSIM 0.99 / LPIPS 0.06. Training-frame metrics: PSNR 34.787 / SSIM 0.9886 / LPIPS 0.0580.
-- Relight run `20261112-0332`: 391 valid non-L2 `(config, frame)` pairs (PNG + EXR). L2's 280 entries are pending Yutong's spotlight exponent `n`; the complete PRENDO output is 671 pairs.
+- Relight run `20261112-0332`: **671 valid `(config, frame)` pairs** (391 non-L2 + 280 L2; PNG + EXR). L2 was rendered with `n=23.13538193587864`; calibration artifacts are in `runs/20261112-0332/calibration/`.
 - The exact code commit and run command are recorded in `runs/20261112-0332/record.json` and `runs/vrcaps_lumen_100_v2_r30k/command.txt`.
 - B2 GT images are not part of the PRENDO delivery; Yutong receives them from the VRCaps group.
 
