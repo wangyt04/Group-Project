@@ -1,0 +1,1 @@
+Namespace(sh_degree=0, source_path='/rds/general/user/yl15425/ephemeral/prendo/data/VRCaps_lumen_100_v2', model_path='/rds/general/user/yl15425/ephemeral/prendo/runs/vrcaps_lumen_100_v2_r30k', images='images', depths='depths', resolution=1, white_background=False, data_device='cuda', eval=True, use_hg=False)

@@ -1,0 +1,37 @@
+#!/bin/bash
+#PBS -l select=1:ncpus=8:mem=64gb:ngpus=1:gpu_type=L40S
+#PBS -l walltime=02:00:00
+#PBS -N prendo_render
+#PBS -j oe
+set -euo pipefail
+
+cd "${PBS_O_WORKDIR:-$HOME}"
+source "$HOME/prendo/code/PR-ENDO/hpc/env.sh"
+source "$PRENDO_CODE/hpc/train.env"
+
+RUN_DIR="$PRENDO_RUNS/$RUN_NAME"
+cd "$PRENDO_CODE"
+
+python render.py \
+  --model_path "$RUN_DIR" \
+  --eval \
+  -s "$PRENDO_DATA" \
+  --skip_train \
+  --iteration "$ITERATIONS"
+
+python render_light_rotations.py \
+  --iteration "$ITERATIONS" \
+  --model_path "$RUN_DIR" \
+  --eval \
+  -s "$PRENDO_DATA" \
+  --spotlight_attenuation_power 10 \
+  --max_rot 12
+
+python metrics.py "$PRENDO_RUNS"
+
+test -d "$RUN_DIR/test/ours_${ITERATIONS}/renders"
+test -d "$RUN_DIR/test/ours_${ITERATIONS}/albedo"
+test -d "$RUN_DIR/test/ours_${ITERATIONS}/normals"
+test -d "$RUN_DIR/rotate_light_video_maxrot12_cospower10"
+test -f "$PRENDO_RUNS/mean_results.txt"
+echo "render complete"

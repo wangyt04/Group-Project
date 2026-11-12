@@ -1,0 +1,4682 @@
+{
+  "method": "Nearest point on transformed colon triangles plus two-sided camera-to-light segment/triangle intersection; AABBs only accelerate exact triangle queries",
+  "mesh_triangles": 346183,
+  "threshold_world_units": 0.016797593235969546,
+  "lumen_basis": "Camera centres are the preserved validated lumen trajectory. L3 candidates must retain surface clearance and an unobstructed segment from that lumen witness; no bounding-box containment or global watertight solid claim is used.",
+  "entries": [
+    {
+      "config": "L3_f+0.25",
+      "frame": "0000",
+      "light_pos_world": [
+        -1.8022282554121105,
+        9.143896373472504,
+        -2.3701203517201197
+      ],
+      "minimum_surface_distance": 0.12307926319407811,
+      "nearest_triangle_index": 95646,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398798047768123,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0003",
+      "light_pos_world": [
+        -1.8001988139023997,
+        9.147521763961608,
+        -2.373776365172162
+      ],
+      "minimum_surface_distance": 0.11885272733638143,
+      "nearest_triangle_index": 95646,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796871386009,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0006",
+      "light_pos_world": [
+        -1.79817113861739,
+        9.151142353557086,
+        -2.3774342947596114
+      ],
+      "minimum_surface_distance": 0.11466158678714765,
+      "nearest_triangle_index": 95646,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797246282078,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0010",
+      "light_pos_world": [
+        -1.7954721852529838,
+        9.155956152900803,
+        -2.3823195368130268
+      ],
+      "minimum_surface_distance": 0.10898980720940399,
+      "nearest_triangle_index": 305772,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398795211601334,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0013",
+      "light_pos_world": [
+        -1.7934526759313334,
+        9.159549604121942,
+        -2.3859934642851304
+      ],
+      "minimum_surface_distance": 0.10476636369993474,
+      "nearest_triangle_index": 305772,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797522364275,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0017",
+      "light_pos_world": [
+        -1.790768394656709,
+        9.164314473272553,
+        -2.3909114942927427
+      ],
+      "minimum_surface_distance": 0.09933498506075733,
+      "nearest_triangle_index": 305772,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797116849119,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0020",
+      "light_pos_world": [
+        -1.7887626766623548,
+        9.16786165256015,
+        -2.3946178805436045
+      ],
+      "minimum_surface_distance": 0.09545164526765965,
+      "nearest_triangle_index": 305772,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398798025085573,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0024",
+      "light_pos_world": [
+        -1.7860998849343446,
+        9.172551762213942,
+        -2.399588994121075
+      ],
+      "minimum_surface_distance": 0.09056791979513125,
+      "nearest_triangle_index": 305772,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796286867395,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0027",
+      "light_pos_world": [
+        -1.7841127216327957,
+        9.176035468387793,
+        -2.403342432744749
+      ],
+      "minimum_surface_distance": 0.08715848549448718,
+      "nearest_triangle_index": 305772,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797767747969,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0030",
+      "light_pos_world": [
+        -1.7821347280470823,
+        9.179486632009603,
+        -2.4071194936066735
+      ],
+      "minimum_surface_distance": 0.0839972372590604,
+      "nearest_triangle_index": 305772,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796408095768,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0034",
+      "light_pos_world": [
+        -1.7795129586504865,
+        9.184033758185073,
+        -2.4121965565073964
+      ],
+      "minimum_surface_distance": 0.08021898691952993,
+      "nearest_triangle_index": 305772,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398798728279891,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0037",
+      "light_pos_world": [
+        -1.7775590234091894,
+        9.187400397773157,
+        -2.416036693847662
+      ],
+      "minimum_surface_distance": 0.07773321820469693,
+      "nearest_triangle_index": 305777,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796926806468,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0041",
+      "light_pos_world": [
+        -1.7749710371342502,
+        9.191828750257141,
+        -2.4212032000880157
+      ],
+      "minimum_surface_distance": 0.07455317188860537,
+      "nearest_triangle_index": 305776,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.0839879792746911,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0044",
+      "light_pos_world": [
+        -1.7730435444231603,
+        9.195102242694063,
+        -2.425113864955449
+      ],
+      "minimum_surface_distance": 0.07236613730775326,
+      "nearest_triangle_index": 305776,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797724981327,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0048",
+      "light_pos_world": [
+        -1.770492098101756,
+        9.19940127600228,
+        -2.4303774939906937
+      ],
+      "minimum_surface_distance": 0.07006341183662004,
+      "nearest_triangle_index": 305776,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797236949286,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0051",
+      "light_pos_world": [
+        -1.7685924834384208,
+        9.202576807861806,
+        -2.4343625411311436
+      ],
+      "minimum_surface_distance": 0.0688330827498045,
+      "nearest_triangle_index": 305776,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398798630915018,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0054",
+      "light_pos_world": [
+        -1.7667047903167266,
+        9.20570923666679,
+        -2.4383798636637124
+      ],
+      "minimum_surface_distance": 0.06805472365487007,
+      "nearest_triangle_index": 305776,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797777506999,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0058",
+      "light_pos_world": [
+        -1.7642064590287467,
+        9.209822065782,
+        -2.443785425076282
+      ],
+      "minimum_surface_distance": 0.06768893193113326,
+      "nearest_triangle_index": 305787,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797290140661,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0061",
+      "light_pos_world": [
+        -1.7623462988421208,
+        9.212857437623175,
+        -2.4478759978618463
+      ],
+      "minimum_surface_distance": 0.0677789453412468,
+      "nearest_triangle_index": 305787,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398798754277505,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0065",
+      "light_pos_world": [
+        -1.759883457151398,
+        9.216844612077697,
+        -2.453376209647123
+      ],
+      "minimum_surface_distance": 0.06834091235415386,
+      "nearest_triangle_index": 305787,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797495929287,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0068",
+      "light_pos_world": [
+        -1.7580488008388815,
+        9.219790486264571,
+        -2.4575345790948013
+      ],
+      "minimum_surface_distance": 0.06908408146720138,
+      "nearest_triangle_index": 305787,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398799091548574,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0072",
+      "light_pos_world": [
+        -1.7556183518069237,
+        9.223663405095545,
+        -2.463120182976784
+      ],
+      "minimum_surface_distance": 0.07067247577987691,
+      "nearest_triangle_index": 305787,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796828721407,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0075",
+      "light_pos_world": [
+        -1.753806363375932,
+        9.226529278322701,
+        -2.467337567647732
+      ],
+      "minimum_surface_distance": 0.07234057466936229,
+      "nearest_triangle_index": 305787,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797868763477,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0078",
+      "light_pos_world": [
+        -1.7520028419202207,
+        9.229366313561481,
+        -2.4715767873540475
+      ],
+      "minimum_surface_distance": 0.07438433686016381,
+      "nearest_triangle_index": 305787,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.0839879745161253,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0082",
+      "light_pos_world": [
+        -1.7496101574567362,
+        9.233108050957572,
+        -2.4772588576226866
+      ],
+      "minimum_surface_distance": 0.07762684243826425,
+      "nearest_triangle_index": 305793,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797434014535,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0085",
+      "light_pos_world": [
+        -1.7478232192027097,
+        9.235887923359499,
+        -2.4815392912560057
+      ],
+      "minimum_surface_distance": 0.0802708973528163,
+      "nearest_triangle_index": 305793,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398798811524,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0089",
+      "light_pos_world": [
+        -1.74544924085702,
+        9.23956485102038,
+        -2.487266601051523
+      ],
+      "minimum_surface_distance": 0.08364048667702279,
+      "nearest_triangle_index": 305800,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797081726997,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0092",
+      "light_pos_world": [
+        -1.7436738865236263,
+        9.242305630336736,
+        -2.4915732582778
+      ],
+      "minimum_surface_distance": 0.08629253881178026,
+      "nearest_triangle_index": 305800,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398798629130787,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0096",
+      "light_pos_world": [
+        -1.741311575941575,
+        9.245945364769002,
+        -2.4973244400373886
+      ],
+      "minimum_surface_distance": 0.09011806767857408,
+      "nearest_triangle_index": 305825,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.083987986825987,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f+0.25",
+      "frame": "0099",
+      "light_pos_world": [
+        -1.7395420884889887,
+        9.24866798177402,
+        -2.5016403931375066
+      ],
+      "minimum_surface_distance": 0.09304340149392304,
+      "nearest_triangle_index": 305825,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796712219662,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0000",
+      "light_pos_world": [
+        -1.8637716339616688,
+        9.05600329998941,
+        -2.2408797093150365
+      ],
+      "minimum_surface_distance": 0.08331775902471728,
+      "nearest_triangle_index": 96792,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398798047768123,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0003",
+      "light_pos_world": [
+        -1.861566999925115,
+        9.05895254023761,
+        -2.2449146023876523
+      ],
+      "minimum_surface_distance": 0.08656295998356317,
+      "nearest_triangle_index": 96791,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796871386009,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0006",
+      "light_pos_world": [
+        -1.859362745431072,
+        9.061898951984906,
+        -2.248954255045076
+      ],
+      "minimum_surface_distance": 0.08983028390418046,
+      "nearest_triangle_index": 96791,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797246282078,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0010",
+      "light_pos_world": [
+        -1.8564261988412545,
+        9.065816994682205,
+        -2.2543529599826275
+      ],
+      "minimum_surface_distance": 0.09421104030631991,
+      "nearest_triangle_index": 96791,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398795211601334,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0013",
+      "light_pos_world": [
+        -1.8542268914057027,
+        9.068740953739386,
+        -2.2584152385652114
+      ],
+      "minimum_surface_distance": 0.09748660472819579,
+      "nearest_triangle_index": 96791,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797522364275,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0017",
+      "light_pos_world": [
+        -1.8513007066769092,
+        9.072616373895416,
+        -2.2638555421452455
+      ],
+      "minimum_surface_distance": 0.10183141614851919,
+      "nearest_triangle_index": 96791,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797116849119,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0020",
+      "light_pos_world": [
+        -1.8491119266091296,
+        9.07549886684903,
+        -2.267956887522802
+      ],
+      "minimum_surface_distance": 0.10501390232257038,
+      "nearest_triangle_index": 96823,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398798025085573,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0024",
+      "light_pos_world": [
+        -1.8462028761435363,
+        9.079305995354417,
+        -2.273459025288105
+      ],
+      "minimum_surface_distance": 0.10917517895357702,
+      "nearest_triangle_index": 96823,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796286867395,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0027",
+      "light_pos_world": [
+        -1.8440293968211838,
+        9.082129891109277,
+        -2.2776139309332297
+      ],
+      "minimum_surface_distance": 0.11226455310989522,
+      "nearest_triangle_index": 96823,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797767747969,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0030",
+      "light_pos_world": [
+        -1.841863675502112,
+        9.084923386911296,
+        -2.281795282241715
+      ],
+      "minimum_surface_distance": 0.11532340848978573,
+      "nearest_triangle_index": 96823,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796408095768,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0034",
+      "light_pos_world": [
+        -1.8389894198132586,
+        9.088596933343247,
+        -2.287415584148121
+      ],
+      "minimum_surface_distance": 0.11935054950676995,
+      "nearest_triangle_index": 96823,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398798728279891,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0037",
+      "light_pos_world": [
+        -1.8368444628426417,
+        9.09131092119657,
+        -2.291666419708246
+      ],
+      "minimum_surface_distance": 0.1223295472519587,
+      "nearest_triangle_index": 96823,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796926806468,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0041",
+      "light_pos_world": [
+        -1.8339996049555936,
+        9.094872452135437,
+        -2.2973846752781952
+      ],
+      "minimum_surface_distance": 0.1261397452661937,
+      "nearest_triangle_index": 96825,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.0839879792746911,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0044",
+      "light_pos_world": [
+        -1.8318777965192226,
+        9.097498389019805,
+        -2.301712325993037
+      ],
+      "minimum_surface_distance": 0.12900240481308295,
+      "nearest_triangle_index": 96825,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797724981327,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0048",
+      "light_pos_world": [
+        -1.8290650632294208,
+        9.100937469114907,
+        -2.3075361145603317
+      ],
+      "minimum_surface_distance": 0.13098285669531645,
+      "nearest_triangle_index": 98585,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797236949286,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0051",
+      "light_pos_world": [
+        -1.8269678288326974,
+        9.103470631713389,
+        -2.311944355078573
+      ],
+      "minimum_surface_distance": 0.13017189772646098,
+      "nearest_triangle_index": 98585,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398798630915018,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0054",
+      "light_pos_world": [
+        -1.8248810842407686,
+        9.10596297402657,
+        -2.3163875542440024
+      ],
+      "minimum_surface_distance": 0.12952689584630495,
+      "nearest_triangle_index": 98585,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797777506999,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0058",
+      "light_pos_world": [
+        -1.8221151333021859,
+        9.109225862074446,
+        -2.322365049472058
+      ],
+      "minimum_surface_distance": 0.12893922415158385,
+      "nearest_triangle_index": 98585,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797290140661,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0061",
+      "light_pos_world": [
+        -1.8200525926068538,
+        9.111626433836786,
+        -2.3268875862751166
+      ],
+      "minimum_surface_distance": 0.12878645625398455,
+      "nearest_triangle_index": 98585,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398798754277505,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0065",
+      "light_pos_world": [
+        -1.8173176708545835,
+        9.11477083592035,
+        -2.3329678417139608
+      ],
+      "minimum_surface_distance": 0.12899264774026561,
+      "nearest_triangle_index": 98585,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797495929287,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0068",
+      "light_pos_world": [
+        -1.8152773100009623,
+        9.117087336611405,
+        -2.337564202490892
+      ],
+      "minimum_surface_distance": 0.12945440576915,
+      "nearest_triangle_index": 98585,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398799091548574,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0072",
+      "light_pos_world": [
+        -1.8125703154904396,
+        9.120124741877111,
+        -2.3437378797673567
+      ],
+      "minimum_surface_distance": 0.13047270888823806,
+      "nearest_triangle_index": 98585,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796828721407,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0075",
+      "light_pos_world": [
+        -1.8105492484252155,
+        9.122366748288627,
+        -2.3483992029821508
+      ],
+      "minimum_surface_distance": 0.13153195510518859,
+      "nearest_triangle_index": 98585,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797868763477,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0078",
+      "light_pos_world": [
+        -1.8085352115923525,
+        9.124582279578167,
+        -2.353084944365923
+      ],
+      "minimum_surface_distance": 0.1328358033010664,
+      "nearest_triangle_index": 98585,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.0839879745161253,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0082",
+      "light_pos_world": [
+        -1.805859593901296,
+        9.127499096259225,
+        -2.3593662415594423
+      ],
+      "minimum_surface_distance": 0.13478171212537335,
+      "nearest_triangle_index": 98598,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797434014535,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0085",
+      "light_pos_world": [
+        -1.803858776189136,
+        9.129663071513548,
+        -2.3640989838904787
+      ],
+      "minimum_surface_distance": 0.1362844396776449,
+      "nearest_triangle_index": 98598,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398798811524,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0089",
+      "light_pos_world": [
+        -1.8011973541442008,
+        9.132522627617316,
+        -2.3704332700117092
+      ],
+      "minimum_surface_distance": 0.13408687812340625,
+      "nearest_triangle_index": 95646,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797081726997,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0092",
+      "light_pos_world": [
+        -1.7992047412534733,
+        9.134653216709163,
+        -2.375197962883089
+      ],
+      "minimum_surface_distance": 0.13096917297386199,
+      "nearest_triangle_index": 305756,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398798629130787,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0096",
+      "light_pos_world": [
+        -1.7965504865126487,
+        9.137483208839397,
+        -2.3815636901505997
+      ],
+      "minimum_surface_distance": 0.12678601923121904,
+      "nearest_triangle_index": 305772,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.083987986825987,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_f-0.25",
+      "frame": "0099",
+      "light_pos_world": [
+        -1.7945603513913824,
+        9.139601442664457,
+        -2.3863434058432063
+      ],
+      "minimum_surface_distance": 0.12372404924943277,
+      "nearest_triangle_index": 305772,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796712219662,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0000",
+      "light_pos_world": [
+        -1.8260143664504853,
+        9.12548025980211,
+        -2.2848110005622067
+      ],
+      "minimum_surface_distance": 0.1067343558564714,
+      "nearest_triangle_index": 98553,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.03359518962564802,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0003",
+      "light_pos_world": [
+        -1.8240506987312557,
+        9.128735692493745,
+        -2.2885661162356
+      ],
+      "minimum_surface_distance": 0.10545992148510534,
+      "nearest_triangle_index": 98556,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.0335951893345134,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0006",
+      "light_pos_world": [
+        -1.822087551225185,
+        9.13198593682171,
+        -2.2923246418565504
+      ],
+      "minimum_surface_distance": 0.10441916474732614,
+      "nearest_triangle_index": 98556,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.03359518621314674,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0010",
+      "light_pos_world": [
+        -1.819471117465683,
+        9.136304760708473,
+        -2.297346091143574
+      ],
+      "minimum_surface_distance": 0.10339015862757817,
+      "nearest_triangle_index": 98556,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.03359518385106565,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0013",
+      "light_pos_world": [
+        -1.817509684596839,
+        9.139525635956023,
+        -2.30112345809858
+      ],
+      "minimum_surface_distance": 0.10290151232317842,
+      "nearest_triangle_index": 98556,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.03359518924547168,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0017",
+      "light_pos_world": [
+        -1.8148960840653423,
+        9.143791394633471,
+        -2.30618089922645
+      ],
+      "minimum_surface_distance": 0.10258737469967757,
+      "nearest_triangle_index": 98559,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.03359518766073124,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0020",
+      "light_pos_world": [
+        -1.812937206893801,
+        9.14696212324706,
+        -2.3099927113699366
+      ],
+      "minimum_surface_distance": 0.10259500151325521,
+      "nearest_triangle_index": 98559,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.03359519080059028,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0024",
+      "light_pos_world": [
+        -1.8103271391254636,
+        9.151147013016336,
+        -2.3151053185939867
+      ],
+      "minimum_surface_distance": 0.10303084152385365,
+      "nearest_triangle_index": 98559,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.03359518434366689,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0027",
+      "light_pos_world": [
+        -1.808371264780689,
+        9.154249065204018,
+        -2.318965344519196
+      ],
+      "minimum_surface_distance": 0.10361125885890242,
+      "nearest_triangle_index": 98571,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.033595189881468604,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0030",
+      "light_pos_world": [
+        -1.8064167376622529,
+        9.157316035759491,
+        -2.32284931507375
+      ],
+      "minimum_surface_distance": 0.10431613500307181,
+      "nearest_triangle_index": 98571,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.0335951835784075,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0034",
+      "light_pos_world": [
+        -1.8038130441936466,
+        9.161346707421666,
+        -2.3280691351538496
+      ],
+      "minimum_surface_distance": 0.1056320460411176,
+      "nearest_triangle_index": 98571,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.03359519070701,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0037",
+      "light_pos_world": [
+        -1.8018620815584314,
+        9.16432271313003,
+        -2.3320164725389723
+      ],
+      "minimum_surface_distance": 0.10694138693362093,
+      "nearest_triangle_index": 98571,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.03359518800511961,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0041",
+      "light_pos_world": [
+        -1.7992631339862932,
+        9.168225677263042,
+        -2.337325868119027
+      ],
+      "minimum_surface_distance": 0.10395195450549327,
+      "nearest_triangle_index": 95649,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.03359518905102665,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0044",
+      "light_pos_world": [
+        -1.7973157931974106,
+        9.171101666487028,
+        -2.341343658941439
+      ],
+      "minimum_surface_distance": 0.09982646731421296,
+      "nearest_triangle_index": 95649,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.033595189895498444,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0048",
+      "light_pos_world": [
+        -1.7947219424349883,
+        9.174866050209426,
+        -2.3467500231293394
+      ],
+      "minimum_surface_distance": 0.09456919530076562,
+      "nearest_triangle_index": 95649,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.0335951872454717,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0051",
+      "light_pos_world": [
+        -1.7927783884686868,
+        9.17763713643413,
+        -2.3508420400352934
+      ],
+      "minimum_surface_distance": 0.09083454693161583,
+      "nearest_triangle_index": 95649,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.03359519145437095,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0054",
+      "light_pos_world": [
+        -1.790836324389339,
+        9.180362222089306,
+        -2.354966342345512
+      ],
+      "minimum_surface_distance": 0.08730531555902761,
+      "nearest_triangle_index": 95649,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.033595189230920114,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0058",
+      "light_pos_world": [
+        -1.7882494021312545,
+        9.183927521994367,
+        -2.360514624893734
+      ],
+      "minimum_surface_distance": 0.0828715239175129,
+      "nearest_triangle_index": 95649,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.03359518817669033,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0061",
+      "light_pos_world": [
+        -1.7863109394555265,
+        9.186549086844417,
+        -2.3647123897144384
+      ],
+      "minimum_surface_distance": 0.07959052858064561,
+      "nearest_triangle_index": 95648,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.0335951915001422,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0065",
+      "light_pos_world": [
+        -1.7837284055656581,
+        9.189980576194838,
+        -2.370355979432131
+      ],
+      "minimum_surface_distance": 0.07509680025225798,
+      "nearest_triangle_index": 95648,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.033595188309173,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0068",
+      "light_pos_world": [
+        -1.7817930075429196,
+        9.192506934465065,
+        -2.374622333876895
+      ],
+      "minimum_surface_distance": 0.07202821493953424,
+      "nearest_triangle_index": 95648,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.033595193667896664,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0072",
+      "light_pos_world": [
+        -1.7792144818785325,
+        9.195817182717828,
+        -2.3803528855957508
+      ],
+      "minimum_surface_distance": 0.06841691148905854,
+      "nearest_triangle_index": 95648,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.0335951873412081,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0075",
+      "light_pos_world": [
+        -1.7772818265660035,
+        9.1982588603514,
+        -2.384679817158527
+      ],
+      "minimum_surface_distance": 0.06609228724815902,
+      "nearest_triangle_index": 95646,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.03359518929585978,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0078",
+      "light_pos_world": [
+        -1.7753501356273156,
+        9.20067007402412,
+        -2.389029548927523
+      ],
+      "minimum_surface_distance": 0.06407123196364657,
+      "nearest_triangle_index": 95646,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.03359518908845851,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0082",
+      "light_pos_world": [
+        -1.7727760681272529,
+        9.203842004184489,
+        -2.394860704051671
+      ],
+      "minimum_surface_distance": 0.06177467746335595,
+      "nearest_triangle_index": 305742,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.03359518634454083,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0085",
+      "light_pos_world": [
+        -1.7708462225116626,
+        9.20619334172885,
+        -2.3992544671654934
+      ],
+      "minimum_surface_distance": 0.06024446796915864,
+      "nearest_triangle_index": 305742,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.03359519164801422,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0089",
+      "light_pos_world": [
+        -1.7682741123113281,
+        9.2092979270787,
+        -2.4051352751703794
+      ],
+      "minimum_surface_distance": 0.05882591886540421,
+      "nearest_triangle_index": 305745,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.03359518768357938,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0092",
+      "light_pos_world": [
+        -1.7663455906699839,
+        9.211609134279186,
+        -2.409559000412393
+      ],
+      "minimum_surface_distance": 0.05815801249658277,
+      "nearest_triangle_index": 305745,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.033595191441556434,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0096",
+      "light_pos_world": [
+        -1.76377467602941,
+        9.214676340174508,
+        -2.415469225107683
+      ],
+      "minimum_surface_distance": 0.05796799909420229,
+      "nearest_triangle_index": 305745,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.03359519082063678,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.10",
+      "frame": "0099",
+      "light_pos_world": [
+        -1.761846666272703,
+        9.216970204057182,
+        -2.419906849808167
+      ],
+      "minimum_surface_distance": 0.05835016739296097,
+      "nearest_triangle_index": 305745,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.03359518841370022,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0000",
+      "light_pos_world": [
+        -1.8155359990958786,
+        9.163775894408841,
+        -2.25377745562915
+      ],
+      "minimum_surface_distance": 0.06509754637866189,
+      "nearest_triangle_index": 98532,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797406412116,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0001",
+      "light_pos_world": [
+        -1.8149581051669,
+        9.164845419358233,
+        -2.2549838675316307
+      ],
+      "minimum_surface_distance": 0.06475048379684309,
+      "nearest_triangle_index": 98534,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.0839879724335731,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0003",
+      "light_pos_world": [
+        -1.8138023864575032,
+        9.166983503084946,
+        -2.2573970649191395
+      ],
+      "minimum_surface_distance": 0.0641241563744862,
+      "nearest_triangle_index": 98534,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797333628216,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0006",
+      "light_pos_world": [
+        -1.8120684650266163,
+        9.170183862897783,
+        -2.2610201922878606
+      ],
+      "minimum_surface_distance": 0.06334539957608165,
+      "nearest_triangle_index": 98534,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796553286804,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0010",
+      "light_pos_world": [
+        -1.809754005593529,
+        9.174432041083929,
+        -2.2658608552621944
+      ],
+      "minimum_surface_distance": 0.06262438642960329,
+      "nearest_triangle_index": 98534,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398795962766557,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0013",
+      "light_pos_world": [
+        -1.8080145359893205,
+        9.17759617149406,
+        -2.2695021181086936
+      ],
+      "minimum_surface_distance": 0.06238856505110351,
+      "nearest_triangle_index": 98557,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797311367787,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0017",
+      "light_pos_world": [
+        -1.8056883841631421,
+        9.1817803512077,
+        -2.2743769707376336
+      ],
+      "minimum_surface_distance": 0.06272063975068516,
+      "nearest_triangle_index": 98557,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796915182703,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0020",
+      "light_pos_world": [
+        -1.8039370647808894,
+        9.184884918560765,
+        -2.2780507023750367
+      ],
+      "minimum_surface_distance": 0.06345233110851531,
+      "nearest_triangle_index": 98557,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797700147433,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0024",
+      "light_pos_world": [
+        -1.8015907770052486,
+        9.188974214364574,
+        -2.2829772819280816
+      ],
+      "minimum_surface_distance": 0.06504965851117842,
+      "nearest_triangle_index": 98557,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796085916946,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0027",
+      "light_pos_world": [
+        -1.7998215731112381,
+        9.191998643387244,
+        -2.2866960885395056
+      ],
+      "minimum_surface_distance": 0.06668950089743227,
+      "nearest_triangle_index": 98557,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797470367217,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0030",
+      "light_pos_world": [
+        -1.7980430414937363,
+        9.194982575208053,
+        -2.2904372057980833
+      ],
+      "minimum_surface_distance": 0.06868101602437288,
+      "nearest_triangle_index": 98557,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398795894601811,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0032",
+      "light_pos_world": [
+        -1.7968518037755565,
+        9.196947929545644,
+        -2.292944725134994
+      ],
+      "minimum_surface_distance": 0.07019046056300816,
+      "nearest_triangle_index": 98557,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796808806826,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0034",
+      "light_pos_world": [
+        -1.7956558266363079,
+        9.198893749907926,
+        -2.295463732392986
+      ],
+      "minimum_surface_distance": 0.07183521632711232,
+      "nearest_triangle_index": 98557,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797676752551,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0037",
+      "light_pos_world": [
+        -1.793852589207205,
+        9.201773293597782,
+        -2.2992638461804997
+      ],
+      "minimum_surface_distance": 0.07453690074683349,
+      "nearest_triangle_index": 98557,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797001280024,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0041",
+      "light_pos_world": [
+        -1.7914298533983501,
+        9.20553829136317,
+        -2.30437376377291
+      ],
+      "minimum_surface_distance": 0.07853261053132256,
+      "nearest_triangle_index": 98557,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797262756665,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0044",
+      "light_pos_world": [
+        -1.7895984772867397,
+        9.208303692432168,
+        -2.3082395041422323
+      ],
+      "minimum_surface_distance": 0.07744115227552538,
+      "nearest_triangle_index": 95678,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797473874556,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0048",
+      "light_pos_world": [
+        -1.787136985089088,
+        9.211911066685673,
+        -2.31343985141008
+      ],
+      "minimum_surface_distance": 0.07108809495140408,
+      "nearest_triangle_index": 95678,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796811367833,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0050",
+      "light_pos_world": [
+        -1.7858975449857901,
+        9.213680773344386,
+        -2.316059882663149
+      ],
+      "minimum_surface_distance": 0.06794791410560606,
+      "nearest_triangle_index": 95678,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797128292966,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0051",
+      "light_pos_world": [
+        -1.7852757369683783,
+        9.214557261403929,
+        -2.3173749279309463
+      ],
+      "minimum_surface_distance": 0.06638824134028433,
+      "nearest_triangle_index": 95678,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797863592643,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0054",
+      "light_pos_world": [
+        -1.7834014050552263,
+        9.217151397203244,
+        -2.3213402924329944
+      ],
+      "minimum_surface_distance": 0.061758358642092386,
+      "nearest_triangle_index": 95678,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797307729934,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0058",
+      "light_pos_world": [
+        -1.780882311079937,
+        9.22053285909358,
+        -2.3266737063230796
+      ],
+      "minimum_surface_distance": 0.055720834240083186,
+      "nearest_triangle_index": 95678,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797044172464,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0061",
+      "light_pos_world": [
+        -1.7789781800520856,
+        9.223009813516072,
+        -2.3307082861833743
+      ],
+      "minimum_surface_distance": 0.05132539156822067,
+      "nearest_triangle_index": 95678,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797875035453,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0065",
+      "light_pos_world": [
+        -1.7764201679096594,
+        9.226239854488558,
+        -2.336131910059514
+      ],
+      "minimum_surface_distance": 0.04569928268632564,
+      "nearest_triangle_index": 95678,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.0839879707729315,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0067",
+      "light_pos_world": [
+        -1.7751333294911973,
+        9.22782370044548,
+        -2.3388622598515436
+      ],
+      "minimum_surface_distance": 0.04301707306263451,
+      "nearest_triangle_index": 95666,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796798237138,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0068",
+      "light_pos_world": [
+        -1.7744879357274161,
+        9.22860896900568,
+        -2.3402317485029673
+      ],
+      "minimum_surface_distance": 0.04171711860469267,
+      "nearest_triangle_index": 95666,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398798416974182,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0072",
+      "light_pos_world": [
+        -1.7718947042233086,
+        9.231701846565077,
+        -2.345738666931272
+      ],
+      "minimum_surface_distance": 0.03680395664073666,
+      "nearest_triangle_index": 95666,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.0839879683530187,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0075",
+      "light_pos_world": [
+        -1.7699378575641482,
+        9.233975130920005,
+        -2.3498969649239045
+      ],
+      "minimum_surface_distance": 0.033201590529981485,
+      "nearest_triangle_index": 95666,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797323965039,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0078",
+      "light_pos_world": [
+        -1.7679717989338588,
+        9.236213740205567,
+        -2.354077573528829
+      ],
+      "minimum_surface_distance": 0.029624578988649543,
+      "nearest_triangle_index": 95666,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797272114754,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0082",
+      "light_pos_world": [
+        -1.7653378567996079,
+        9.239149650048626,
+        -2.3596829357425815
+      ],
+      "minimum_surface_distance": 0.025100386231671306,
+      "nearest_triangle_index": 95650,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796586135256,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0085",
+      "light_pos_world": [
+        -1.7633540597352724,
+        9.241320108167342,
+        -2.36390746155387
+      ],
+      "minimum_surface_distance": 0.022472160552722158,
+      "nearest_triangle_index": 95650,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797912003628,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0089",
+      "light_pos_world": [
+        -1.7607003345274048,
+        9.244179208718474,
+        -2.3695632846285246
+      ],
+      "minimum_surface_distance": 0.020085040902697214,
+      "nearest_triangle_index": 95650,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796920894629,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0092",
+      "light_pos_world": [
+        -1.7587050058421347,
+        9.246303700413543,
+        -2.3738190851603163
+      ],
+      "minimum_surface_distance": 0.018827560738385582,
+      "nearest_triangle_index": 305736,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797860389219,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0096",
+      "light_pos_world": [
+        -1.7560401432328572,
+        9.24911942022997,
+        -2.3795069651282166
+      ],
+      "minimum_surface_distance": 0.017305411449686985,
+      "nearest_triangle_index": 305735,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797705159117,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0097",
+      "light_pos_world": [
+        -1.7553734414510096,
+        9.249820905934126,
+        -2.380930733731195
+      ],
+      "minimum_surface_distance": 0.017190033366388278,
+      "nearest_triangle_index": 305735,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.0839879818815474,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.25",
+      "frame": "0099",
+      "light_pos_world": [
+        -1.7540398357714793,
+        9.251223441814098,
+        -2.3837792752848834
+      ],
+      "minimum_surface_distance": 0.017413774996878042,
+      "nearest_triangle_index": 305738,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797103425083,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0000",
+      "light_pos_world": [
+        -1.7980720535048675,
+        9.227601952086726,
+        -2.2020548807407216
+      ],
+      "minimum_surface_distance": 0.005276059745613507,
+      "nearest_triangle_index": 98501,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797594812824232,
+      "first_hit_fraction": 0.9602885582849139,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0003",
+      "light_pos_world": [
+        -1.7967218660012492,
+        9.230729854070283,
+        -2.2054486460583718
+      ],
+      "minimum_surface_distance": 0.005808412117176721,
+      "nearest_triangle_index": 98518,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797594667256432,
+      "first_hit_fraction": 0.9505546821655597,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0006",
+      "light_pos_world": [
+        -1.7953699880290017,
+        9.23384707302457,
+        -2.2088461096733774
+      ],
+      "minimum_surface_distance": 0.0028801559097671138,
+      "nearest_triangle_index": 98694,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797593106573608,
+      "first_hit_fraction": 0.959959081617806,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0010",
+      "light_pos_world": [
+        -1.793558819139939,
+        9.237977508376353,
+        -2.2133854621265616
+      ],
+      "minimum_surface_distance": 0.0031805708473374803,
+      "nearest_triangle_index": 98694,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.16797591925533115,
+      "first_hit_fraction": null,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref"
+      ]
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0013",
+      "light_pos_world": [
+        -1.792189288310123,
+        9.241047064057454,
+        -2.2167998847922163
+      ],
+      "minimum_surface_distance": 0.007725803103266587,
+      "nearest_triangle_index": 98694,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.16797594622735573,
+      "first_hit_fraction": null,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref"
+      ]
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0017",
+      "light_pos_world": [
+        -1.7903422176594752,
+        9.245095278831414,
+        -2.221370423256273
+      ],
+      "minimum_surface_distance": 0.013789168405601812,
+      "nearest_triangle_index": 98694,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.16797593830365407,
+      "first_hit_fraction": null,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref"
+      ]
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0020",
+      "light_pos_world": [
+        -1.7889368279260367,
+        9.248089577416943,
+        -2.2248140207168703
+      ],
+      "minimum_surface_distance": 0.01833891423762941,
+      "nearest_triangle_index": 98694,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.16797595400294996,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0024",
+      "light_pos_world": [
+        -1.7870301734715568,
+        9.252019549944967,
+        -2.2294305541515733
+      ],
+      "minimum_surface_distance": 0.024411281463940147,
+      "nearest_triangle_index": 98694,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.16797592171833758,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0027",
+      "light_pos_world": [
+        -1.7855720869954865,
+        9.254914607025952,
+        -2.232913995240022
+      ],
+      "minimum_surface_distance": 0.027702271879538484,
+      "nearest_triangle_index": 98794,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.16797594940734434,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0030",
+      "light_pos_world": [
+        -1.7840868812128754,
+        9.257760140955657,
+        -2.2364170236719723
+      ],
+      "minimum_surface_distance": 0.027521612292528544,
+      "nearest_triangle_index": 98796,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.16797591789203623,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0034",
+      "light_pos_world": [
+        -1.7820604640407431,
+        9.261472154051692,
+        -2.2411213944582133
+      ],
+      "minimum_surface_distance": 0.028457817223189078,
+      "nearest_triangle_index": 98811,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.16797595353505101,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0037",
+      "light_pos_world": [
+        -1.7805034352884945,
+        9.264190927710699,
+        -2.2446761355830454
+      ],
+      "minimum_surface_distance": 0.029508521408845866,
+      "nearest_triangle_index": 98811,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.16797594002559915,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0041",
+      "light_pos_world": [
+        -1.7783743857517784,
+        9.267725981530052,
+        -2.249453589862714
+      ],
+      "minimum_surface_distance": 0.031651414043637624,
+      "nearest_triangle_index": 98811,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.1679759452551333,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0044",
+      "light_pos_world": [
+        -1.776736284102288,
+        9.270307069007401,
+        -2.2530659128102215
+      ],
+      "minimum_surface_distance": 0.0339569443126333,
+      "nearest_triangle_index": 98812,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.16797594947749112,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0048",
+      "light_pos_world": [
+        -1.7744953895125875,
+        9.27365276081275,
+        -2.2579228985446473
+      ],
+      "minimum_surface_distance": 0.03776895578970222,
+      "nearest_triangle_index": 98812,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.16797593622735535,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0051",
+      "light_pos_world": [
+        -1.7727713178011975,
+        9.276090803020258,
+        -2.2615964077570343
+      ],
+      "minimum_surface_distance": 0.041082336936780976,
+      "nearest_triangle_index": 98822,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.16797595727185155,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0054",
+      "light_pos_world": [
+        -1.771009872831705,
+        9.278466689059808,
+        -2.2652968759121315
+      ],
+      "minimum_surface_distance": 0.044529648665349086,
+      "nearest_triangle_index": 98821,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.16797594615459868,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0058",
+      "light_pos_world": [
+        -1.7686038259944077,
+        9.28154175425894,
+        -2.270272175371989
+      ],
+      "minimum_surface_distance": 0.04363824313670681,
+      "nearest_triangle_index": 95776,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.16797594088345058,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0061",
+      "light_pos_world": [
+        -1.766756914379684,
+        9.283777691302163,
+        -2.2740347802982672
+      ],
+      "minimum_surface_distance": 0.03895407514967192,
+      "nearest_triangle_index": 95776,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.16797595750070907,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0065",
+      "light_pos_world": [
+        -1.764239771816328,
+        9.286671984978092,
+        -2.279091794438486
+      ],
+      "minimum_surface_distance": 0.032688851132863114,
+      "nearest_triangle_index": 95776,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.167975941545863,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0068",
+      "light_pos_world": [
+        -1.7623128160349104,
+        9.288779026573375,
+        -2.282914106213088
+      ],
+      "minimum_surface_distance": 0.02797884253717784,
+      "nearest_triangle_index": 95776,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.16797596833948492,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0072",
+      "light_pos_world": [
+        -1.7596950747979356,
+        9.291509619643826,
+        -2.2880483024904734
+      ],
+      "minimum_surface_distance": 0.021689316392106202,
+      "nearest_triangle_index": 95776,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.1679759367060374,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0075",
+      "light_pos_world": [
+        -1.7576979092277227,
+        9.293502248534347,
+        -2.2919255445328677
+      ],
+      "minimum_surface_distance": 0.016954961686398425,
+      "nearest_triangle_index": 95776,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.16797594647930203,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0078",
+      "light_pos_world": [
+        -1.755674571111431,
+        9.29545318384131,
+        -2.295824281197673
+      ],
+      "minimum_surface_distance": 0.01220379040283791,
+      "nearest_triangle_index": 95776,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.16797594544229508,
+      "first_hit_fraction": null,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref"
+      ]
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0082",
+      "light_pos_world": [
+        -1.7529408379201996,
+        9.297995726488853,
+        -2.3010533218940985
+      ],
+      "minimum_surface_distance": 0.005845358097897951,
+      "nearest_triangle_index": 95776,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.1679759317227051,
+      "first_hit_fraction": null,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref"
+      ]
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0085",
+      "light_pos_world": [
+        -1.750867121774622,
+        9.29986471889816,
+        -2.304995785534498
+      ],
+      "minimum_surface_distance": 0.0010605803066181573,
+      "nearest_triangle_index": 95776,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.16797595824007255,
+      "first_hit_fraction": null,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref"
+      ]
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0089",
+      "light_pos_world": [
+        -1.7480773715541993,
+        9.302314678118103,
+        -2.310276633725433
+      ],
+      "minimum_surface_distance": 0.005337170036309704,
+      "nearest_triangle_index": 95776,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797593841789382,
+      "first_hit_fraction": 0.7207892592580336,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0092",
+      "light_pos_world": [
+        -1.7459706977957197,
+        9.304127977304137,
+        -2.314252559740188
+      ],
+      "minimum_surface_distance": 0.009835746137404644,
+      "nearest_triangle_index": 95762,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797595720778438,
+      "first_hit_fraction": 0.6736304775942693,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0096",
+      "light_pos_world": [
+        -1.7431492552386025,
+        9.30652455365574,
+        -2.319569865162439
+      ],
+      "minimum_surface_distance": 0.01044396906670168,
+      "nearest_triangle_index": 92173,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.1679759541031811,
+      "first_hit_fraction": 0.6585771472665921,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r0.50",
+      "frame": "0099",
+      "light_pos_world": [
+        -1.741028451602773,
+        9.308312171408955,
+        -2.3235666510794104
+      ],
+      "minimum_surface_distance": 0.005980161877633777,
+      "nearest_triangle_index": 92173,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797594206850044,
+      "first_hit_fraction": 0.651579802069712,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0000",
+      "light_pos_world": [
+        -1.7631441623228454,
+        9.355254067442495,
+        -2.098609730963865
+      ],
+      "minimum_surface_distance": 0.10331780138899856,
+      "nearest_triangle_index": 261765,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.33595189625648464,
+      "first_hit_fraction": 0.48014427914245694,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0003",
+      "light_pos_world": [
+        -1.762560825088741,
+        9.358222556040957,
+        -2.1015518083368363
+      ],
+      "minimum_surface_distance": 0.10678738658859413,
+      "nearest_triangle_index": 30626,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.33595189334512865,
+      "first_hit_fraction": 0.47527734108277986,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0006",
+      "light_pos_world": [
+        -1.7619730340337725,
+        9.361173493278145,
+        -2.104497944444411
+      ],
+      "minimum_surface_distance": 0.10977702013130913,
+      "nearest_triangle_index": 30626,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.33595186213147216,
+      "first_hit_fraction": 0.479979540808903,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0010",
+      "light_pos_world": [
+        -1.7611684462327588,
+        9.365068442961203,
+        -2.108434675855296
+      ],
+      "minimum_surface_distance": 0.11381697476871039,
+      "nearest_triangle_index": 30626,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.3359518385106623,
+      "first_hit_fraction": 0.6011640683889059,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0013",
+      "light_pos_world": [
+        -1.7605387929517278,
+        9.367948849184245,
+        -2.111395418159262
+      ],
+      "minimum_surface_distance": 0.11692054864973471,
+      "nearest_triangle_index": 30626,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.33595189245471146,
+      "first_hit_fraction": 0.6051195413097893,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0017",
+      "light_pos_world": [
+        -1.7596498846521413,
+        9.371725134078844,
+        -2.115357328293552
+      ],
+      "minimum_surface_distance": 0.12114224387377934,
+      "nearest_triangle_index": 30626,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.33595187660730813,
+      "first_hit_fraction": 0.5995895639573106,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0020",
+      "light_pos_world": [
+        -1.7589363542163312,
+        9.374498895129296,
+        -2.1183406574005375
+      ],
+      "minimum_surface_distance": 0.12436362254574401,
+      "nearest_triangle_index": 30613,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.3359519080058999,
+      "first_hit_fraction": 0.5942607304831607,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0024",
+      "light_pos_world": [
+        -1.7579089664041732,
+        9.378110221105754,
+        -2.122337098598557
+      ],
+      "minimum_surface_distance": 0.1258053178629742,
+      "nearest_triangle_index": 291747,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.33595184343667517,
+      "first_hit_fraction": 0.5880907686855348,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0027",
+      "light_pos_world": [
+        -1.7570731147639833,
+        9.38074653430337,
+        -2.1253498086410545
+      ],
+      "minimum_surface_distance": 0.12476190183973193,
+      "nearest_triangle_index": 291747,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.3359518988146887,
+      "first_hit_fraction": 0.5836439734406018,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0030",
+      "light_pos_world": [
+        -1.7561745606511536,
+        9.383315272450865,
+        -2.12837665941975
+      ],
+      "minimum_surface_distance": 0.12378242087190103,
+      "nearest_triangle_index": 291747,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.33595183578407245,
+      "first_hit_fraction": 0.5845551713887113,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0034",
+      "light_pos_world": [
+        -1.7548697388496137,
+        9.386628962339223,
+        -2.132436718588668
+      ],
+      "minimum_surface_distance": 0.12256675577400893,
+      "nearest_triangle_index": 291747,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.33595190707010203,
+      "first_hit_fraction": 0.5908301156774282,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0037",
+      "light_pos_world": [
+        -1.7538051274510735,
+        9.389026195936534,
+        -2.1355007143881366
+      ],
+      "minimum_surface_distance": 0.12171627634947008,
+      "nearest_triangle_index": 291743,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.3359518800511983,
+      "first_hit_fraction": 0.6028681231733892,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0041",
+      "light_pos_world": [
+        -1.752263450458635,
+        9.392101361863816,
+        -2.139613242042323
+      ],
+      "minimum_surface_distance": 0.1206679516198093,
+      "nearest_triangle_index": 291745,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.3359518905102666,
+      "first_hit_fraction": 0.6160156710090664,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0044",
+      "light_pos_world": [
+        -1.7510118977333846,
+        9.39431382215787,
+        -2.1427187301462
+      ],
+      "minimum_surface_distance": 0.11993891041265535,
+      "nearest_triangle_index": 291745,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.33595189895498223,
+      "first_hit_fraction": 0.6249333619621458,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0048",
+      "light_pos_world": [
+        -1.7492121983595865,
+        9.397136149066906,
+        -2.146888992813782
+      ],
+      "minimum_surface_distance": 0.11903546131609764,
+      "nearest_triangle_index": 291745,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.3359518724547107,
+      "first_hit_fraction": 0.637569400558956,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0051",
+      "light_pos_world": [
+        -1.7477624794668358,
+        9.399157886252919,
+        -2.15003936740921
+      ],
+      "minimum_surface_distance": 0.11841444188725618,
+      "nearest_triangle_index": 291745,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.3359519145437031,
+      "first_hit_fraction": 0.6418861571448865,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0054",
+      "light_pos_world": [
+        -1.7462268083846624,
+        9.401097272772937,
+        -2.1532100428704055
+      ],
+      "minimum_surface_distance": 0.11784517028486949,
+      "nearest_triangle_index": 291745,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.33595189230919736,
+      "first_hit_fraction": 0.6457832092071447,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0058",
+      "light_pos_world": [
+        -1.744046855823349,
+        9.403559544589658,
+        -2.1574691134698085
+      ],
+      "minimum_surface_distance": 0.11716990455414356,
+      "nearest_triangle_index": 291745,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.33595188176690116,
+      "first_hit_fraction": 0.6496705154248849,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0061",
+      "light_pos_world": [
+        -1.7423143830348806,
+        9.405313446874345,
+        -2.160687768528053
+      ],
+      "minimum_surface_distance": 0.11663172995884157,
+      "nearest_triangle_index": 291745,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.33595191500141813,
+      "first_hit_fraction": 0.6495185367405797,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0065",
+      "light_pos_world": [
+        -1.7398789796296654,
+        9.40753624595716,
+        -2.1650115631964297
+      ],
+      "minimum_surface_distance": 0.11583897302391555,
+      "nearest_triangle_index": 291745,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.335951883091726,
+      "first_hit_fraction": 0.6500091958393116,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0068",
+      "light_pos_world": [
+        -1.737962576649899,
+        9.40911914170876,
+        -2.1682788216333293
+      ],
+      "minimum_surface_distance": 0.1152934520711298,
+      "nearest_triangle_index": 291741,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.33595193667896983,
+      "first_hit_fraction": 0.6473282253604837,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0072",
+      "light_pos_world": [
+        -1.7352958159471896,
+        9.411125165801323,
+        -2.1726675736088765
+      ],
+      "minimum_surface_distance": 0.11469805053631925,
+      "nearest_triangle_index": 291741,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.3359518734120748,
+      "first_hit_fraction": 0.6420364500128052,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0075",
+      "light_pos_world": [
+        -1.7332180125548717,
+        9.41255648376303,
+        -2.175982703750794
+      ],
+      "minimum_surface_distance": 0.11436058409816982,
+      "nearest_triangle_index": 291741,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.33595189295860406,
+      "first_hit_fraction": 0.6377245435947431,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0078",
+      "light_pos_world": [
+        -1.7310801154665754,
+        9.413932071112797,
+        -2.1793176965353602
+      ],
+      "minimum_surface_distance": 0.1141260571912274,
+      "nearest_triangle_index": 291741,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.33595189088459015,
+      "first_hit_fraction": 0.6327899313502744,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0082",
+      "light_pos_world": [
+        -1.7281468001613831,
+        9.415687879369308,
+        -2.1837940941971326
+      ],
+      "minimum_surface_distance": 0.1139858303013534,
+      "nearest_triangle_index": 291741,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.3359518634454102,
+      "first_hit_fraction": 0.6194451525934805,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0085",
+      "light_pos_world": [
+        -1.725893245853321,
+        9.416953940359797,
+        -2.1871724334957534
+      ],
+      "minimum_surface_distance": 0.11401175684482019,
+      "nearest_triangle_index": 291752,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.3359519164801451,
+      "first_hit_fraction": 0.6007219458162069,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0089",
+      "light_pos_world": [
+        -1.7228314456077882,
+        9.418585616917358,
+        -2.19170333191925
+      ],
+      "minimum_surface_distance": 0.11380677991643788,
+      "nearest_triangle_index": 93305,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.33595187683578764,
+      "first_hit_fraction": 0.3603946296290168,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0092",
+      "light_pos_world": [
+        -1.7205020817028895,
+        9.419776531085326,
+        -2.195119508899932
+      ],
+      "minimum_surface_distance": 0.11178829685268127,
+      "nearest_triangle_index": 93305,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.33595191441556876,
+      "first_hit_fraction": 0.33681523879713465,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0096",
+      "light_pos_world": [
+        -1.7173674792500933,
+        9.42133482050728,
+        -2.199695665230884
+      ],
+      "minimum_surface_distance": 0.1092642157264523,
+      "nearest_triangle_index": 93305,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.3359519082063622,
+      "first_hit_fraction": 0.32928857363329606,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_r1.00",
+      "frame": "0099",
+      "light_pos_world": [
+        -1.7150056832653604,
+        9.422489630598673,
+        -2.2031414026684644
+      ],
+      "minimum_surface_distance": 0.10751479183268066,
+      "nearest_triangle_index": 93305,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.3359518841370009,
+      "first_hit_fraction": 0.325789901034856,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0000",
+      "light_pos_world": [
+        -1.9091714186448367,
+        9.1323368005025,
+        -2.319746789575123
+      ],
+      "minimum_surface_distance": 0.05358941157413121,
+      "nearest_triangle_index": 82052,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796944151707,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0003",
+      "light_pos_world": [
+        -1.907176559086647,
+        9.135319160928939,
+        -2.3236284179716704
+      ],
+      "minimum_surface_distance": 0.05509366571844638,
+      "nearest_triangle_index": 82084,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796855222337,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0006",
+      "light_pos_world": [
+        -1.9051805296914086,
+        9.13829922850427,
+        -2.327514334130656
+      ],
+      "minimum_surface_distance": 0.056449301533717015,
+      "nearest_triangle_index": 82084,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796551951486,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0010",
+      "light_pos_world": [
+        -1.9025184085082874,
+        9.14226625061872,
+        -2.3327045586596853
+      ],
+      "minimum_surface_distance": 0.05769356963314437,
+      "nearest_triangle_index": 98621,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398795965517176,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0013",
+      "light_pos_world": [
+        -1.900522017231241,
+        9.14523242588858,
+        -2.3366058732260964
+      ],
+      "minimum_surface_distance": 0.05511869813580854,
+      "nearest_triangle_index": 98621,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797223610976,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0017",
+      "light_pos_world": [
+        -1.8978618502097255,
+        9.149174757214851,
+        -2.3418224003418944
+      ],
+      "minimum_surface_distance": 0.05231007917441439,
+      "nearest_triangle_index": 98621,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796606697834,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0020",
+      "light_pos_world": [
+        -1.8958688626587294,
+        9.152117573346784,
+        -2.34574713647398
+      ],
+      "minimum_surface_distance": 0.050741170457160485,
+      "nearest_triangle_index": 98621,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.0839879728522808,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0024",
+      "light_pos_world": [
+        -1.8932154723356058,
+        9.156021569362583,
+        -2.350999293486507
+      ],
+      "minimum_surface_distance": 0.04945125428527532,
+      "nearest_triangle_index": 98621,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796408569158,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0027",
+      "light_pos_world": [
+        -1.891229530515842,
+        9.158932240384912,
+        -2.3549541251710093
+      ],
+      "minimum_surface_distance": 0.04902661164301314,
+      "nearest_triangle_index": 98625,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796876439643,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0030",
+      "light_pos_world": [
+        -1.8892476121689832,
+        9.161826002820835,
+        -2.3589231426463657
+      ],
+      "minimum_surface_distance": 0.04876464013515913,
+      "nearest_triangle_index": 98625,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796470803128,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0034",
+      "light_pos_world": [
+        -1.88661257667923,
+        9.165656029079168,
+        -2.3642393531581325
+      ],
+      "minimum_surface_distance": 0.04925574950610312,
+      "nearest_triangle_index": 98625,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797305824982,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0037",
+      "light_pos_world": [
+        -1.8846426119925406,
+        9.16850563144707,
+        -2.368244952471062
+      ],
+      "minimum_surface_distance": 0.05027966756112047,
+      "nearest_triangle_index": 98625,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796863714257,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0041",
+      "light_pos_world": [
+        -1.8820252550879584,
+        9.172273587801538,
+        -2.3736117116391435
+      ],
+      "minimum_surface_distance": 0.05236062421968035,
+      "nearest_triangle_index": 292217,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797042804433,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0044",
+      "light_pos_world": [
+        -1.8800697984537074,
+        9.17507413150222,
+        -2.3776563490292473
+      ],
+      "minimum_surface_distance": 0.05414790897905207,
+      "nearest_triangle_index": 292217,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797226286372,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0048",
+      "light_pos_world": [
+        -1.8774733074884429,
+        9.178772891616322,
+        -2.3830758183650618
+      ],
+      "minimum_surface_distance": 0.05690283310919955,
+      "nearest_triangle_index": 292216,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796602742992,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0051",
+      "light_pos_world": [
+        -1.8755342549828837,
+        9.181520979942173,
+        -2.3871600833671467
+      ],
+      "minimum_surface_distance": 0.05942582377070566,
+      "nearest_triangle_index": 292216,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797268209203,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0054",
+      "light_pos_world": [
+        -1.8736023782618663,
+        9.184245338715565,
+        -2.391261221326587
+      ],
+      "minimum_surface_distance": 0.06229619576752958,
+      "nearest_triangle_index": 292216,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796935495263,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0058",
+      "light_pos_world": [
+        -1.8710380343937283,
+        9.187843468446635,
+        -2.396754431566343
+      ],
+      "minimum_surface_distance": 0.0665751327453541,
+      "nearest_triangle_index": 292216,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796894027671,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0061",
+      "light_pos_world": [
+        -1.8691232354245493,
+        9.190514112835295,
+        -2.400892768544865
+      ],
+      "minimum_surface_distance": 0.06943215028245309,
+      "nearest_triangle_index": 292245,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.0839879722629327,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0065",
+      "light_pos_world": [
+        -1.8665809823995794,
+        9.194041970090055,
+        -2.4064332979896763
+      ],
+      "minimum_surface_distance": 0.06958683644980926,
+      "nearest_triangle_index": 292256,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797323958328,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0068",
+      "light_pos_world": [
+        -1.8646821056809992,
+        9.196662309369067,
+        -2.4106049560578398
+      ],
+      "minimum_surface_distance": 0.06865037608177933,
+      "nearest_triangle_index": 95635,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797639427347,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0072",
+      "light_pos_world": [
+        -1.862160115600183,
+        9.200124309712974,
+        -2.4161870294069168
+      ],
+      "minimum_surface_distance": 0.06336676827666718,
+      "nearest_triangle_index": 95635,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796975143964,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0075",
+      "light_pos_world": [
+        -1.8602753413724136,
+        9.202697668089048,
+        -2.4203868352529136
+      ],
+      "minimum_surface_distance": 0.059566313203020166,
+      "nearest_triangle_index": 95635,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797313309302,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0078",
+      "light_pos_world": [
+        -1.8583957226027081,
+        9.205254042857348,
+        -2.424596870805801
+      ],
+      "minimum_surface_distance": 0.055888789906721935,
+      "nearest_triangle_index": 95635,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797253950557,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0082",
+      "light_pos_world": [
+        -1.8558968443150174,
+        9.208637390489201,
+        -2.430223914321238
+      ],
+      "minimum_surface_distance": 0.05070294782690403,
+      "nearest_triangle_index": 95632,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398797014945268,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0085",
+      "light_pos_world": [
+        -1.8540270655668145,
+        9.211158218643385,
+        -2.4344526990490376
+      ],
+      "minimum_surface_distance": 0.04649410996092705,
+      "nearest_triangle_index": 95632,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.083987974286973,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0089",
+      "light_pos_world": [
+        -1.851538876171186,
+        9.214499609262772,
+        -2.4401000731241727
+      ],
+      "minimum_surface_distance": 0.041169609677662485,
+      "nearest_triangle_index": 95632,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.0839879686436693,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0092",
+      "light_pos_world": [
+        -1.8496754825369202,
+        9.216993834483244,
+        -2.4443404724727196
+      ],
+      "minimum_surface_distance": 0.037477989090149016,
+      "nearest_triangle_index": 305798,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.083987967687447,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0096",
+      "light_pos_world": [
+        -1.847193226448435,
+        9.220308354396312,
+        -2.449998105748221
+      ],
+      "minimum_surface_distance": 0.03274937373510783,
+      "nearest_triangle_index": 305798,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.0839879734036601,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.25",
+      "frame": "0099",
+      "light_pos_world": [
+        -1.8453323180927397,
+        9.222787430961326,
+        -2.4542422692600665
+      ],
+      "minimum_surface_distance": 0.02926111701099789,
+      "nearest_triangle_index": 305803,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.08398796758880858,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0000",
+      "light_pos_world": [
+        -1.9853428926027838,
+        9.164723764274042,
+        -2.333993548632668
+      ],
+      "minimum_surface_distance": 0.02489839273846991,
+      "nearest_triangle_index": 82065,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797593888303353,
+      "first_hit_fraction": 0.8429168712740728,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0003",
+      "light_pos_world": [
+        -1.9834702112595366,
+        9.167401169758268,
+        -2.3379113521634336
+      ],
+      "minimum_surface_distance": 0.024371758779118225,
+      "nearest_triangle_index": 82081,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797593710444675,
+      "first_hit_fraction": 0.8501495484223374,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0006",
+      "light_pos_world": [
+        -1.9815941173585863,
+        9.170077804237545,
+        -2.341834393358968
+      ],
+      "minimum_surface_distance": 0.02389813839438188,
+      "nearest_triangle_index": 82082,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797593103903039,
+      "first_hit_fraction": 0.8547663215527924,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0010",
+      "light_pos_world": [
+        -1.9790876249694556,
+        9.173645927445936,
+        -2.3470728689215434
+      ],
+      "minimum_surface_distance": 0.022100333350807057,
+      "nearest_triangle_index": 82083,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797591931034353,
+      "first_hit_fraction": 0.8620720432664823,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0013",
+      "light_pos_world": [
+        -1.9772042507939638,
+        9.176319572846493,
+        -2.3510073950270223
+      ],
+      "minimum_surface_distance": 0.020698357749575416,
+      "nearest_triangle_index": 82101,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797594447221897,
+      "first_hit_fraction": 0.8708817153230728,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0017",
+      "light_pos_world": [
+        -1.974689149752642,
+        9.179884090845718,
+        -2.356261282464795
+      ],
+      "minimum_surface_distance": 0.019007429122657706,
+      "nearest_triangle_index": 82104,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797593213395676,
+      "first_hit_fraction": 0.8826153220593372,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0020",
+      "light_pos_world": [
+        -1.9728004236817167,
+        9.182554886988978,
+        -2.360206888914757
+      ],
+      "minimum_surface_distance": 0.018360662189885458,
+      "nearest_triangle_index": 82126,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797594570456165,
+      "first_hit_fraction": 0.8904450863470162,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0024",
+      "light_pos_world": [
+        -1.9702795641322712,
+        9.186114259940988,
+        -2.3654745772684236
+      ],
+      "minimum_surface_distance": 0.01897983664482337,
+      "nearest_triangle_index": 82127,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797592817138368,
+      "first_hit_fraction": 0.885189683331035,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0027",
+      "light_pos_world": [
+        -1.9683880018046942,
+        9.188781801021289,
+        -2.3694300685030294
+      ],
+      "minimum_surface_distance": 0.019769484709336517,
+      "nearest_triangle_index": 82127,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797593752879286,
+      "first_hit_fraction": 0.852457591934136,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0030",
+      "light_pos_world": [
+        -1.9664960225633692,
+        9.19144699618122,
+        -2.3733888973685375
+      ],
+      "minimum_surface_distance": 0.021516561830907274,
+      "nearest_triangle_index": 82127,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797592941606265,
+      "first_hit_fraction": 0.8175572209231617,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0034",
+      "light_pos_world": [
+        -1.9639739641265876,
+        9.194996712394175,
+        -2.3786726359885058
+      ],
+      "minimum_surface_distance": 0.023420489047892956,
+      "nearest_triangle_index": 292202,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797594611649955,
+      "first_hit_fraction": 0.8079690148262463,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0037",
+      "light_pos_world": [
+        -1.9620834808591656,
+        9.197655603409277,
+        -2.3826383481641695
+      ],
+      "minimum_surface_distance": 0.021066619823543933,
+      "nearest_triangle_index": 292202,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797593727428514,
+      "first_hit_fraction": 0.828816405000515,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0041",
+      "light_pos_world": [
+        -1.9595651891309949,
+        9.201196574406787,
+        -2.3879294855951816
+      ],
+      "minimum_surface_distance": 0.018302148595215294,
+      "nearest_triangle_index": 292202,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797594085608866,
+      "first_hit_fraction": 0.8782913457505891,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0044",
+      "light_pos_world": [
+        -1.9576789264362233,
+        9.203847947147505,
+        -2.3918996025842514
+      ],
+      "minimum_surface_distance": 0.016546346822758257,
+      "nearest_triangle_index": 292203,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797594452572745,
+      "first_hit_fraction": 0.8956286451468273,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0048",
+      "light_pos_world": [
+        -1.9551680343112974,
+        9.207376410674051,
+        -2.3971948324546113
+      ],
+      "minimum_surface_distance": 0.01502677699746284,
+      "nearest_triangle_index": 292203,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797593205485992,
+      "first_hit_fraction": 0.908947359227754,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0051",
+      "light_pos_world": [
+        -1.9532883538302084,
+        9.210018240096748,
+        -2.4011667186294345
+      ],
+      "minimum_surface_distance": 0.014188858014096103,
+      "nearest_triangle_index": 292206,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.167975945364184,
+      "first_hit_fraction": 0.9143823199948854,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0054",
+      "light_pos_world": [
+        -1.951411819244985,
+        9.21265457208445,
+        -2.4051387336993164
+      ],
+      "minimum_surface_distance": 0.013879016747986297,
+      "nearest_triangle_index": 292206,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797593870990526,
+      "first_hit_fraction": 0.9171516344358333,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0058",
+      "light_pos_world": [
+        -1.9489152726219903,
+        9.216162972965048,
+        -2.4104336258585164
+      ],
+      "minimum_surface_distance": 0.013778499231085359,
+      "nearest_triangle_index": 292209,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797593788055343,
+      "first_hit_fraction": 0.9168681997751797,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0061",
+      "light_pos_world": [
+        -1.9470470251246113,
+        9.21878628994061,
+        -2.4144037450212488
+      ],
+      "minimum_surface_distance": 0.014078008085966513,
+      "nearest_triangle_index": 292209,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797594452586548,
+      "first_hit_fraction": 0.9150363227096213,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0065",
+      "light_pos_world": [
+        -1.944561400796168,
+        9.222276216181085,
+        -2.4196945702988106
+      ],
+      "minimum_surface_distance": 0.014347708824209753,
+      "nearest_triangle_index": 292256,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797594647916594,
+      "first_hit_fraction": 0.9145303713901761,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0068",
+      "light_pos_world": [
+        -1.9427011559420766,
+        9.224885707300146,
+        -2.423660521322833
+      ],
+      "minimum_surface_distance": 0.013717909931935607,
+      "nearest_triangle_index": 292265,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797595278854693,
+      "first_hit_fraction": 0.9175629525981491,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0072",
+      "light_pos_world": [
+        -1.9402258975516844,
+        9.22835454593962,
+        -2.4289450274417637
+      ],
+      "minimum_surface_distance": 0.012784955971127311,
+      "nearest_triangle_index": 292265,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797593950287934,
+      "first_hit_fraction": 0.9231833221563405,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0075",
+      "light_pos_world": [
+        -1.9383728768442534,
+        9.230947322872433,
+        -2.4329052851908854
+      ],
+      "minimum_surface_distance": 0.012585986383241153,
+      "nearest_triangle_index": 292268,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797594626618656,
+      "first_hit_fraction": 0.9242737605384223,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0078",
+      "light_pos_world": [
+        -1.9365224184491296,
+        9.233533789144872,
+        -2.4368628757516166
+      ],
+      "minimum_surface_distance": 0.01245764339891847,
+      "nearest_triangle_index": 292268,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797594507901115,
+      "first_hit_fraction": 0.9250404866055064,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0082",
+      "light_pos_world": [
+        -1.9340588129510188,
+        9.236971207370006,
+        -2.4421352790514117
+      ],
+      "minimum_surface_distance": 0.013070304753355915,
+      "nearest_triangle_index": 292269,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797594029890595,
+      "first_hit_fraction": 0.9209181028368222,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0085",
+      "light_pos_world": [
+        -1.9322131334377062,
+        9.239540939850247,
+        -2.4460862605248326
+      ],
+      "minimum_surface_distance": 0.013416454648861579,
+      "nearest_triangle_index": 292270,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797594857394593,
+      "first_hit_fraction": 0.9199173524667948,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0089",
+      "light_pos_world": [
+        -1.9297544548417616,
+        9.242955479206696,
+        -2.451350210716729
+      ],
+      "minimum_surface_distance": 0.013666102533715892,
+      "nearest_triangle_index": 292271,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.1679759372873386,
+      "first_hit_fraction": 0.9180321644700307,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0092",
+      "light_pos_world": [
+        -1.9279116511852905,
+        9.245508245443538,
+        -2.455295334364995
+      ],
+      "minimum_surface_distance": 0.013894005737980384,
+      "nearest_triangle_index": 292123,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.167975935374894,
+      "first_hit_fraction": 0.9130970163315951,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0096",
+      "light_pos_world": [
+        -1.9254554216697581,
+        9.248902421988426,
+        -2.4605521464024482
+      ],
+      "minimum_surface_distance": 0.015466339509279779,
+      "nearest_triangle_index": 292123,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.1679759468073202,
+      "first_hit_fraction": 0.8816444122765326,
+      "valid": false,
+      "invalid_reasons": [
+        "surface_clearance_below_0.05_dref",
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L3_u0.50",
+      "frame": "0099",
+      "light_pos_world": [
+        -1.9236134162452938,
+        9.251440149703413,
+        -2.4644926390297766
+      ],
+      "minimum_surface_distance": 0.017845024230884295,
+      "nearest_triangle_index": 292124,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": true,
+      "segment_length": 0.16797593517761716,
+      "first_hit_fraction": 0.8441426974398675,
+      "valid": false,
+      "invalid_reasons": [
+        "camera_to_light_segment_intersects_surface"
+      ]
+    },
+    {
+      "config": "L5_seg1",
+      "frame": "0000",
+      "light_pos_world": [
+        -1.8329999446868896,
+        9.099949836730957,
+        -2.305500030517578
+      ],
+      "minimum_surface_distance": 0.12978820241959732,
+      "nearest_triangle_index": 98585,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.0,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L5_seg1",
+      "frame": "0002",
+      "light_pos_world": [
+        -1.8329999446868896,
+        9.099949836730957,
+        -2.305500030517578
+      ],
+      "minimum_surface_distance": 0.12978820241959732,
+      "nearest_triangle_index": 98585,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.003656013202978283,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L5_seg1",
+      "frame": "0004",
+      "light_pos_world": [
+        -1.8329999446868896,
+        9.099949836730957,
+        -2.305500030517578
+      ],
+      "minimum_surface_distance": 0.12978820241959732,
+      "nearest_triangle_index": 98585,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.00731255707721957,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L5_seg1",
+      "frame": "0006",
+      "light_pos_world": [
+        -1.8329999446868896,
+        9.099949836730957,
+        -2.305500030517578
+      ],
+      "minimum_surface_distance": 0.12978820241959732,
+      "nearest_triangle_index": 98585,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.010967922849227539,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L5_seg1",
+      "frame": "0008",
+      "light_pos_world": [
+        -1.8329999446868896,
+        9.099949836730957,
+        -2.305500030517578
+      ],
+      "minimum_surface_distance": 0.12978820241959732,
+      "nearest_triangle_index": 98585,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.014623048613245284,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L5_seg1",
+      "frame": "0010",
+      "light_pos_world": [
+        -1.8329999446868896,
+        9.099949836730957,
+        -2.305500030517578
+      ],
+      "minimum_surface_distance": 0.12978820241959732,
+      "nearest_triangle_index": 98585,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.01827823349746892,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L5_seg1",
+      "frame": "0012",
+      "light_pos_world": [
+        -1.8329999446868896,
+        9.099949836730957,
+        -2.305500030517578
+      ],
+      "minimum_surface_distance": 0.12978820241959732,
+      "nearest_triangle_index": 98585,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.021931848927026133,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L5_seg1",
+      "frame": "0014",
+      "light_pos_world": [
+        -1.8329999446868896,
+        9.099949836730957,
+        -2.305500030517578
+      ],
+      "minimum_surface_distance": 0.12978820241959732,
+      "nearest_triangle_index": 98585,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.025584820848536537,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L5_seg1",
+      "frame": "0016",
+      "light_pos_world": [
+        -1.8329999446868896,
+        9.099949836730957,
+        -2.305500030517578
+      ],
+      "minimum_surface_distance": 0.12978820241959732,
+      "nearest_triangle_index": 98585,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.02923691546094975,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L5_seg1",
+      "frame": "0018",
+      "light_pos_world": [
+        -1.8329999446868896,
+        9.099949836730957,
+        -2.305500030517578
+      ],
+      "minimum_surface_distance": 0.12978820241959732,
+      "nearest_triangle_index": 98585,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.03288747460185471,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L5_seg2",
+      "frame": "0080",
+      "light_pos_world": [
+        -1.7790005207061768,
+        9.178644180297852,
+        -2.4153175354003906
+      ],
+      "minimum_surface_distance": 0.08546643311421558,
+      "nearest_triangle_index": 305772,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.0,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L5_seg2",
+      "frame": "0082",
+      "light_pos_world": [
+        -1.7790005207061768,
+        9.178644180297852,
+        -2.4153175354003906
+      ],
+      "minimum_surface_distance": 0.08546643311421558,
+      "nearest_triangle_index": 305772,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.0036504182631859864,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L5_seg2",
+      "frame": "0084",
+      "light_pos_world": [
+        -1.7790005207061768,
+        9.178644180297852,
+        -2.4153175354003906
+      ],
+      "minimum_surface_distance": 0.08546643311421558,
+      "nearest_triangle_index": 305772,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.007301903554491268,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L5_seg2",
+      "frame": "0086",
+      "light_pos_world": [
+        -1.7790005207061768,
+        9.178644180297852,
+        -2.4153175354003906
+      ],
+      "minimum_surface_distance": 0.08546643311421558,
+      "nearest_triangle_index": 305772,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.01095441284605677,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L5_seg2",
+      "frame": "0088",
+      "light_pos_world": [
+        -1.7790005207061768,
+        9.178644180297852,
+        -2.4153175354003906
+      ],
+      "minimum_surface_distance": 0.08546643311421558,
+      "nearest_triangle_index": 305772,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.014608087828153805,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L5_seg2",
+      "frame": "0090",
+      "light_pos_world": [
+        -1.7790005207061768,
+        9.178644180297852,
+        -2.4153175354003906
+      ],
+      "minimum_surface_distance": 0.08546643311421558,
+      "nearest_triangle_index": 305772,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.018262324264546128,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L5_seg2",
+      "frame": "0092",
+      "light_pos_world": [
+        -1.7790005207061768,
+        9.178644180297852,
+        -2.4153175354003906
+      ],
+      "minimum_surface_distance": 0.08546643311421558,
+      "nearest_triangle_index": 305772,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.021917098314964748,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L5_seg2",
+      "frame": "0094",
+      "light_pos_world": [
+        -1.7790005207061768,
+        9.178644180297852,
+        -2.4153175354003906
+      ],
+      "minimum_surface_distance": 0.08546643311421558,
+      "nearest_triangle_index": 305772,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.02557233207856717,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L5_seg2",
+      "frame": "0096",
+      "light_pos_world": [
+        -1.7790005207061768,
+        9.178644180297852,
+        -2.4153175354003906
+      ],
+      "minimum_surface_distance": 0.08546643311421558,
+      "nearest_triangle_index": 305772,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.029228611624786474,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    },
+    {
+      "config": "L5_seg2",
+      "frame": "0098",
+      "light_pos_world": [
+        -1.7790005207061768,
+        9.178644180297852,
+        -2.4153175354003906
+      ],
+      "minimum_surface_distance": 0.08546643311421558,
+      "nearest_triangle_index": 305772,
+      "required_clearance": 0.016797593235969546,
+      "obstructed": false,
+      "segment_length": 0.032884452354039514,
+      "first_hit_fraction": null,
+      "valid": true,
+      "invalid_reasons": []
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "generated_UTC": "2026-11-12T01:40:51.914893+00:00",
+  "source_baseline": "D:\\OneDrive - Imperial College London\\Material\\Group\\wk5\\VRCaps_lumen_100_v2",
+  "source_geometry": "D:\\Unity\\Week5Point\\20261112T004200Z\\point_full",
+  "source_geometry_matches_v2": [
+    "mesh asset",
+    "actual meshWorld transform",
+    "vertex/triangle counts",
+    "material hash"
+  ],
+  "mesh_asset": "Assets/Imported/GI Organs/GI_2_high_connected.fbx",
+  "meshWorld_Unity_row_major": [
+    1.0,
+    0.0,
+    0.0,
+    2.558170795440674,
+    0.0,
+    -1.0,
+    -2.384185791015625e-07,
+    7.2129998207092285,
+    0.0,
+    2.384185791015625e-07,
+    -1.0,
+    0.13199999928474426,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "world_conversion": "Reflect Unity X for mesh vertices; cameras copied from actual RH/OpenGL baseline",
+  "selection": "selection.json",
+  "generator": "build_relight_v2_config.py",
+  "source_handoff": "Group-Project/handoff VR-Caps section 6 and data-flow document, read as task inputs",
+  "HDRP_spot_evidence": {
+    "version": "7.3.1",
+    "HDAdditionalLightData.cs": "k_MinSpotInnerPercent=0; setter clamps to [0,100]; SetSpotAngle(60,0) uses innerSpotPercent, not legacy Light.innerSpotAngle",
+    "LightLoop.cs": "cos(inner half angle)=cos(full spot angle * 0.5 * innerSpotPercent01); yields half angle 0 degrees"
+  },
+  "Unity_invocations": 0,
+  "renders": 0,
+  "source_hash_sweep": false
+}

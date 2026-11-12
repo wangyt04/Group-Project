@@ -1,0 +1,21 @@
+#!/bin/bash
+#PBS -l select=1:ncpus=8:mem=64gb:ngpus=1:gpu_type=L40S
+#PBS -l walltime=00:40:00
+#PBS -N prendo_smoke
+#PBS -j oe
+set -euo pipefail
+
+cd "${PBS_O_WORKDIR:-$HOME}"
+source "$HOME/prendo/code/PR-ENDO/hpc/env.sh"
+cd "$PRENDO_CODE"
+
+nvidia-smi | tee "$PRENDO_LOGS/smoke_nvidia_smi.txt"
+python tools/validate_vrcaps_interface.py \
+  --data "$PRENDO_DATA" \
+  --repo "$PRENDO_CODE" \
+  --report "$PRENDO_LOGS/interface_cpu.json"
+python tools/validate_vrcaps_interface.py \
+  --data "$PRENDO_DATA" \
+  --repo "$PRENDO_CODE" \
+  --gpu \
+  --report "$PRENDO_LOGS/smoke_report.json"

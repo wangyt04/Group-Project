@@ -1,0 +1,54 @@
+#!/bin/bash
+#PBS -l select=1:ncpus=8:mem=64gb:ngpus=1:gpu_type=L40S
+#PBS -l walltime=02:00:00
+#PBS -N prendo_envbuild
+#PBS -j oe
+set -euo pipefail
+
+cd "${PBS_O_WORKDIR:-$HOME}"
+source "$HOME/prendo/code/PR-ENDO/hpc/paths.sh"
+
+LOG="$PRENDO_LOGS/env_build.log"
+exec > >(tee -a "$LOG") 2>&1
+echo "start $(date -u +%FT%TZ)"
+echo "host $(hostname)"
+echo "MODULEPATH=$MODULEPATH"
+module list 2>&1 || true
+
+if ! conda env list | awk '{print $1}' | grep -qx prendo; then
+  conda create -y -n prendo python=3.10
+fi
+conda activate prendo
+
+python -m pip install --upgrade pip
+python -m pip install "setuptools==75.8.0" wheel
+python -m pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 \
+  --index-url https://download.pytorch.org/whl/cu121
+python -m pip install "numpy<2" tqdm lpips plyfile matplotlib natsort pytorch_ssim \
+  pytorch_msssim "imageio[ffmpeg]" ninja cmake tensorboard
+python -m pip install openexr || conda install -y -c conda-forge openexr
+
+cd "$PRENDO_CODE"
+python -m pip install --no-build-isolation \
+  submodules/depth-diff-gaussian-rasterization/ \
+  submodules/simple-knn/ \
+  submodules/gaussian-norms/
+python -m pip install \
+  https://github.com/kyamagu/faiss-wheels/releases/download/v1.7.3/faiss_gpu-1.7.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+python -m pip install --no-build-isolation \
+  git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
+
+python - <<'PY'
+import torch
+print("torch", torch.__version__)
+print("cuda", torch.version.cuda)
+print("device", torch.cuda.get_device_name(0))
+print("capability", torch.cuda.get_device_capability(0))
+print("mem_gb", torch.cuda.get_device_properties(0).total_memory / 1e9)
+import tinycudann, diff_gaussian_rasterization, simple_knn, faiss
+print("extensions ok")
+PY
+
+python -m pip freeze > "$PRENDO_LOGS/pip_freeze.txt"
+conda list --export > "$PRENDO_LOGS/conda_export.txt"
+echo "done $(date -u +%FT%TZ)"

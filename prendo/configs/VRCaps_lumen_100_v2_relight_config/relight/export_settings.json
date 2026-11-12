@@ -1,0 +1,383 @@
+{
+  "stage": "B1 metadata only",
+  "reference_images_generated": false,
+  "depth_channel": null,
+  "actual_v2_baseline": {
+    "dataset": "VRCaps_lumen_100_v2",
+    "physical_scale_verified": false,
+    "mm_per_unity_unit": null,
+    "light": {
+      "count": 1,
+      "Unity_type": "Point",
+      "HDRP_type": "Point",
+      "color_linear_RGB": [
+        1,
+        1,
+        1
+      ],
+      "camera_local_offset_world_units": [
+        0,
+        0,
+        0
+      ],
+      "intensity": 50000.0,
+      "intensity_unit": "Candela",
+      "range_world_units": 6.71999979019165,
+      "shape_radius_world_units": 0,
+      "applyRangeAttenuation": false,
+      "attenuation": "Inverse-square; smooth range falloff disabled; Unity range still bounds light culling",
+      "shadows": false
+    },
+    "depth_reference": {
+      "valid_training_pixels": 128303044,
+      "d_ref_world_units": 0.33595186471939087,
+      "method": "Median of finite positive axial depth at minimal-mask valid training pixels; no background/invalid or held-out depths",
+      "range_world_units": 6.72,
+      "physical_scale_verified": false
+    },
+    "exposure": {
+      "mode": "Fixed",
+      "EV100": 20.0,
+      "compensation": 0,
+      "HDRP_pre_exposure_multiplier": 7.94728578057402e-07,
+      "handling": "Color AOV already includes fixed HDRP multiplier once; consume directly as exposed linear RGB. Scene radiance would be AOV / multiplier. No extra exposure multiplication."
+    },
+    "image_pipeline": {
+      "source": "AOVBuffers.Color before postprocessing",
+      "buffer": "R32G32B32A32_SFloat",
+      "CPU_readback": "RGBAFloat Texture2D(linear=true), bottom-up flipped to top-down",
+      "encoding": "round(255 * clamp(exposed_linear_RGB,0,1) ** (1/2.2))",
+      "Unity_sRGB_conversion": false,
+      "PNG": "RGB8; no second gamma or ICC transform",
+      "tone_mapping": false,
+      "appearance_postprocessing": false
+    },
+    "environment": {
+      "sky": false,
+      "GI_lightmaps": false,
+      "indirect_diffuse": 0,
+      "indirect_specular": 0,
+      "reflection_probes": false,
+      "SSR": false,
+      "SSAO": false,
+      "ambient": "Flat black"
+    },
+    "effective_disabled_frame_settings": [
+      {
+        "type": "Postprocess",
+        "json": "False"
+      },
+      {
+        "type": "CustomPostProcess",
+        "json": "False"
+      },
+      {
+        "type": "Tonemapping",
+        "json": "False"
+      },
+      {
+        "type": "ColorGrading",
+        "json": "False"
+      },
+      {
+        "type": "ShadowMaps",
+        "json": "False"
+      },
+      {
+        "type": "ContactShadows",
+        "json": "False"
+      },
+      {
+        "type": "ScreenSpaceShadows",
+        "json": "False"
+      },
+      {
+        "type": "Shadowmask",
+        "json": "False"
+      },
+      {
+        "type": "SSR",
+        "json": "False"
+      },
+      {
+        "type": "SSAO",
+        "json": "False"
+      },
+      {
+        "type": "ReflectionProbe",
+        "json": "False"
+      },
+      {
+        "type": "PlanarProbe",
+        "json": "False"
+      },
+      {
+        "type": "SkyReflection",
+        "json": "False"
+      },
+      {
+        "type": "AtmosphericScattering",
+        "json": "False"
+      },
+      {
+        "type": "Volumetrics",
+        "json": "False"
+      }
+    ],
+    "saturation": {
+      "measurement": "Visible valid tissue: existing numerical_valid AND direct surface_agreement AND finite positive axial depth; broad diagnostic mask excluded",
+      "threshold": "any linear RGB channel >= 1 before clamp",
+      "maximum_frame_fraction": 0.0011893093843643539,
+      "per_frame_report": "review/rgb_validation.json",
+      "checked_frames": 100
+    },
+    "source_Unity_light_serialized": {
+      "Light": {
+        "m_Enabled": true,
+        "serializedVersion": "10",
+        "m_Type": 2,
+        "m_Shape": 0,
+        "m_Color": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_Intensity": 50000.0,
+        "m_Range": 6.71999979019165,
+        "m_SpotAngle": 110.0,
+        "m_InnerSpotAngle": 1.0,
+        "m_CookieSize": 10.0,
+        "m_Shadows": {
+          "m_Type": 0,
+          "m_Resolution": -1,
+          "m_CustomResolution": -1,
+          "m_Strength": 1.0,
+          "m_Bias": 0.05000000074505806,
+          "m_NormalBias": 0.4000000059604645,
+          "m_NearPlane": 0.20000000298023224,
+          "m_CullingMatrixOverride": {
+            "e00": 4.0,
+            "e01": 0.0,
+            "e02": 0.0,
+            "e03": 0.0,
+            "e10": 0.0,
+            "e11": 4.0,
+            "e12": 0.0,
+            "e13": 0.0,
+            "e20": 0.0,
+            "e21": 0.0,
+            "e22": 1.8511223793029785,
+            "e23": -1.1851122379302979,
+            "e30": 0.0,
+            "e31": 0.0,
+            "e32": 0.0,
+            "e33": 1.0
+          },
+          "m_UseCullingMatrixOverride": false
+        },
+        "m_Cookie": {
+          "instanceID": 0
+        },
+        "m_DrawHalo": false,
+        "m_Flare": {
+          "instanceID": 0
+        },
+        "m_RenderMode": 0,
+        "m_CullingMask": {
+          "serializedVersion": "2",
+          "m_Bits": 4294967295
+        },
+        "m_RenderingLayerMask": 1,
+        "m_Lightmapping": 4,
+        "m_LightShadowCasterMode": 2,
+        "m_AreaSize": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "m_BounceIntensity": 0.0,
+        "m_ColorTemperature": 6570.0,
+        "m_UseColorTemperature": false,
+        "m_BoundingSphereOverride": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.5902128219604492,
+          "w": 0.6880052089691162
+        },
+        "m_UseBoundingSphereOverride": false,
+        "m_ShadowRadius": 0.0,
+        "m_ShadowAngle": 0.0
+      }
+    },
+    "source_HDRP_light_serialized": {
+      "MonoBehaviour": {
+        "m_Enabled": true,
+        "m_EditorHideFlags": 0,
+        "m_Name": "",
+        "m_EditorClassIdentifier": "",
+        "m_Version": 10,
+        "m_ObsoleteShadowResolutionTier": 1,
+        "m_ObsoleteUseShadowQualitySettings": false,
+        "m_ObsoleteCustomShadowResolution": 512,
+        "m_ObsoleteContactShadows": false,
+        "m_PointlightHDType": 0,
+        "m_SpotLightShape": 0,
+        "m_AreaLightShape": 0,
+        "m_Intensity": 50000.0,
+        "m_EnableSpotReflector": false,
+        "m_LuxAtDistance": 25.0,
+        "m_InnerSpotPercent": 100.0,
+        "m_LightDimmer": 1.0,
+        "m_VolumetricDimmer": 1.0,
+        "m_LightUnit": 1,
+        "m_FadeDistance": 10000.0,
+        "m_AffectDiffuse": true,
+        "m_AffectSpecular": true,
+        "m_NonLightmappedOnly": false,
+        "m_ShapeWidth": 0.5,
+        "m_ShapeHeight": 0.5,
+        "m_AspectRatio": 1.0,
+        "m_ShapeRadius": 0.0,
+        "m_SoftnessScale": 1.0,
+        "m_UseCustomSpotLightShadowCone": false,
+        "m_CustomSpotLightShadowCone": 1.0,
+        "m_MaxSmoothness": 0.9900000095367432,
+        "m_ApplyRangeAttenuation": false,
+        "m_DisplayAreaLightEmissiveMesh": false,
+        "m_AreaLightCookie": {
+          "instanceID": 0
+        },
+        "m_AreaLightShadowCone": 120.0,
+        "m_UseScreenSpaceShadows": false,
+        "m_InteractsWithSky": true,
+        "m_AngularDiameter": 0.5,
+        "m_FlareSize": 2.0,
+        "m_FlareTint": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_FlareFalloff": 4.0,
+        "m_SurfaceTexture": {
+          "instanceID": 0
+        },
+        "m_SurfaceTint": {
+          "r": 1.0,
+          "g": 1.0,
+          "b": 1.0,
+          "a": 1.0
+        },
+        "m_Distance": 149999992832.0,
+        "m_UseRayTracedShadows": false,
+        "m_NumRayTracingSamples": 4,
+        "m_FilterTracedShadow": true,
+        "m_FilterSizeTraced": 16,
+        "m_SunLightConeAngle": 0.5,
+        "m_LightShadowRadius": 0.5,
+        "m_SemiTransparentShadow": false,
+        "m_ColorShadow": true,
+        "m_EvsmExponent": 15.0,
+        "m_EvsmLightLeakBias": 0.0,
+        "m_EvsmVarianceBias": 9.999999747378752e-06,
+        "m_EvsmBlurPasses": 0,
+        "m_LightlayersMask": 1,
+        "m_LinkShadowLayers": true,
+        "m_ShadowNearPlane": 0.3199999928474426,
+        "m_BlockerSampleCount": 24,
+        "m_FilterSampleCount": 16,
+        "m_MinFilterSize": 1.0,
+        "m_KernelSize": 5,
+        "m_LightAngle": 1.0,
+        "m_MaxDepthBias": 0.0010000000474974513,
+        "m_ShadowResolution": {
+          "m_Override": 512,
+          "m_UseOverride": true,
+          "m_Level": 0
+        },
+        "m_ShadowDimmer": 1.0,
+        "m_VolumetricShadowDimmer": 1.0,
+        "m_ShadowFadeDistance": 10000.0,
+        "m_UseContactShadow": {
+          "m_Override": false,
+          "m_UseOverride": true,
+          "m_Level": 0
+        },
+        "m_RayTracedContactShadow": false,
+        "m_ShadowTint": {
+          "r": 0.0,
+          "g": 0.0,
+          "b": 0.0,
+          "a": 1.0
+        },
+        "m_PenumbraTint": false,
+        "m_NormalBias": 0.75,
+        "m_SlopeBias": 0.5,
+        "m_ShadowUpdateMode": 0,
+        "m_BarnDoorAngle": 90.0,
+        "m_BarnDoorLength": 0.05000000074505806,
+        "m_ShadowCascadeRatios": [
+          0.05000000074505806,
+          0.20000000298023224,
+          0.30000001192092896
+        ],
+        "m_ShadowCascadeBorders": [
+          0.20000000298023224,
+          0.20000000298023224,
+          0.20000000298023224,
+          0.20000000298023224
+        ],
+        "m_ShadowAlgorithm": 0,
+        "m_ShadowVariant": 0,
+        "m_ShadowPrecision": 0,
+        "useOldInspector": false,
+        "useVolumetric": true,
+        "featuresFoldout": true,
+        "showAdditionalSettings": 0,
+        "m_AreaLightEmissiveMeshShadowCastingMode": 0,
+        "m_AreaLightEmissiveMeshMotionVectorGenerationMode": 0
+      }
+    }
+  },
+  "actual_camera": {
+    "Unity": "2019.4.40f1",
+    "pipeline": "HDRP 7.3.1",
+    "project_color_space": "Linear (m_ActiveColorSpace=1)",
+    "width": 1350,
+    "height": 1080,
+    "antialiasing": "None",
+    "intrinsics": {
+      "fl_x": 664.6633833646774,
+      "fl_y": 664.6633672714233,
+      "cx": 675.0,
+      "cy": 540.0
+    },
+    "projection_horizontal_FOV_deg": 90.88415158989551,
+    "projection_vertical_FOV_deg": 78.18366901239135,
+    "serialized_Unity_camera_fieldOfView_deg": 91.32075500488281
+  },
+  "actual_training_depth": {
+    "format": "Unchanged float32 TIFF",
+    "channel": "ViewLayer.Depth.Z",
+    "convention": "axial camera-Z in consistent unverified world units",
+    "depth_scale": 1.0
+  },
+  "proposed_B2_only": {
+    "status": "NOT RENDERED; future reference work requires separate authorisation",
+    "RGB": "Exposed linear RGB float EXR; same fixed HDRP exposure once, no PNG gamma in EXR",
+    "depth": "Single-channel axial Z EXR; invalid/background zero; channel name Z proposed, not produced",
+    "noshadow": "Shadows off",
+    "shadow": "L3/L5 only: hard shadows, highest supported resolution; effective resolution not yet set or measured",
+    "inherit": "Baseline intensity/exposure/range/material/pipeline unless a config explicitly changes light type, intensity, color, position or planned shadow variant",
+    "L2": {
+      "outer_half_deg": 30,
+      "inner_half_deg": 0,
+      "Unity_full_outer_deg": 60,
+      "HDRP_innerSpotPercent": 0,
+      "status": "Provisional table default; substantially narrower than camera FOV; Yutong confirmation/calibration pending",
+      "n": null
+    }
+  },
+  "physical_scale_verified": false,
+  "mm_per_unit": null
+}

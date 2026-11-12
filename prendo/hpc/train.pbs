@@ -1,0 +1,137 @@
+#!/bin/bash
+#PBS -l select=1:ncpus=8:mem=64gb:ngpus=1:gpu_type=L40S
+#PBS -l walltime=24:00:00
+#PBS -N prendo_train
+#PBS -j oe
+set -euo pipefail
+
+cd "${PBS_O_WORKDIR:-$HOME}"
+source "$HOME/prendo/code/PR-ENDO/hpc/env.sh"
+source "$PRENDO_CODE/hpc/train.env"
+
+RUN_DIR="$PRENDO_RUNS/$RUN_NAME"
+mkdir -p "$RUN_DIR"
+LOG="$RUN_DIR/train.log"
+exec > >(tee -a "$LOG") 2>&1
+
+echo "PBS_JOBID=${PBS_JOBID:-unknown}"
+echo "host=$(hostname)"
+nvidia-smi | tee "$RUN_DIR/nvidia_smi.txt"
+nvidia-smi --query-gpu=name,memory.total --format=csv,noheader,nounits > "$RUN_DIR/gpu_info.txt"
+
+(
+  while true; do
+    nvidia-smi --query-gpu=memory.used --format=csv,noheader,nounits
+    sleep 10
+  done
+) > "$RUN_DIR/gpu_mem_samples.txt" &
+MONITOR_PID=$!
+trap 'kill "$MONITOR_PID" 2>/dev/null || true' EXIT
+
+cd "$PRENDO_CODE"
+
+echo "=== pre-flight reader validation ==="
+python tools/validate_vrcaps_interface.py \
+  --data "$PRENDO_DATA" \
+  --repo "$PRENDO_CODE" \
+  --report "$PRENDO_LOGS/interface_cpu.json"
+
+echo "=== pre-flight GPU smoke ==="
+if python tools/validate_vrcaps_interface.py \
+  --data "$PRENDO_DATA" \
+  --repo "$PRENDO_CODE" \
+  --gpu \
+  --resolution 1 \
+  --report "$PRENDO_LOGS/smoke_report.json"; then
+  SMOKE_RES=1
+else
+  echo "GPU smoke at resolution 1 failed; retrying at resolution 2"
+  python tools/validate_vrcaps_interface.py \
+    --data "$PRENDO_DATA" \
+    --repo "$PRENDO_CODE" \
+    --gpu \
+    --resolution 2 \
+    --report "$PRENDO_LOGS/smoke_report.json"
+  SMOKE_RES=2
+fi
+
+SMOKE_PEAK=$(python -c "import json; print(json.load(open('$PRENDO_LOGS/smoke_report.json'))['gpu']['peak_vram_gb'])")
+if [ "$SMOKE_RES" -eq 1 ] && python -c "import sys; sys.exit(0 if float('$SMOKE_PEAK') <= 40.0 else 1)"; then
+  RESOLUTION=1
+else
+  RESOLUTION=2
+fi
+echo "smoke resolution ${SMOKE_RES}, peak VRAM ${SMOKE_PEAK} GB; training resolution ${RESOLUTION}"
+COMMAND="python train_viewdir.py --model_path $RUN_DIR -s $PRENDO_DATA --eval --resolution $RESOLUTION --iteration $ITERATIONS --lambda_depth 0.2 --lambda_norm 0.1 --albedo_loss_weight 1.0 --densification_interval 1000 --opacity_reset_interval 3000 --densify_until_iter 10000 --densify_from_iter 1000 --mlp_lr 0.0005 --grid_lr 0.0005 --end_diffuse_loss_iter 20000 --port 6000 --K_normals $K_NORMALS --diffuse_loss_weight $DIFFUSE_LOSS_WEIGHT"
+printf '%s\n' "$COMMAND" > "$RUN_DIR/command.txt"
+
+START=$(date +%s)
+set +e
+eval "$COMMAND"
+STATUS=$?
+set -e
+END=$(date +%s)
+
+kill "$MONITOR_PID" 2>/dev/null || true
+trap - EXIT
+
+python - "$RUN_DIR" "$STATUS" "$START" "$END" "$RESOLUTION" "$ITERATIONS" <<'PY'
+import json
+import os
+import sys
+
+run_dir, status, start, end, resolution, iterations = sys.argv[1:]
+info = {
+    "pbs_jobid": os.environ.get("PBS_JOBID"),
+    "hostname": os.uname().nodename,
+    "exit_status": int(status),
+    "walltime_seconds": int(end) - int(start),
+    "resolution": int(resolution),
+    "iterations": int(iterations),
+    "command_file": os.path.join(run_dir, "command.txt"),
+}
+with open(os.path.join(run_dir, "job_info.json"), "w", encoding="utf-8") as f:
+    json.dump(info, f, indent=2)
+print(json.dumps(info, indent=2))
+PY
+
+if [ "$STATUS" -ne 0 ]; then
+  echo "training failed with status $STATUS"
+  exit "$STATUS"
+fi
+test -f "$RUN_DIR/point_cloud/iteration_${ITERATIONS}/point_cloud.ply"
+test -f "$RUN_DIR/chkpnt${ITERATIONS}.pth"
+test -f "$RUN_DIR/chkpnt_mlp${ITERATIONS}.pth"
+test -f "$RUN_DIR/chkpnt_grid_camera${ITERATIONS}.pth"
+test -f "$RUN_DIR/chkpnt_light${ITERATIONS}.pth"
+if grep -q "LOSS NAN" "$RUN_DIR/train.log"; then
+  echo "LOSS NAN detected"
+  exit 2
+fi
+
+echo "=== post-training render ==="
+python render.py \
+  --model_path "$RUN_DIR" \
+  --eval \
+  -s "$PRENDO_DATA" \
+  --skip_train \
+  --iteration "$ITERATIONS"
+
+python render_light_rotations.py \
+  --iteration "$ITERATIONS" \
+  --model_path "$RUN_DIR" \
+  --eval \
+  -s "$PRENDO_DATA" \
+  --spotlight_attenuation_power 10 \
+  --max_rot 12
+
+python metrics.py "$PRENDO_RUNS"
+
+test -d "$RUN_DIR/test/ours_${ITERATIONS}/renders"
+test -d "$RUN_DIR/rotate_light_video_maxrot12_cospower10"
+test -f "$PRENDO_RUNS/mean_results.txt"
+echo "training and render complete"
+
+echo "=== packaging ==="
+bash "$PRENDO_CODE/hpc/package_bundle.sh"
+echo "pipeline complete"

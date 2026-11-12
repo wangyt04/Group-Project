@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "configs": 25,
+  "unique_cameras": 49,
+  "main_frames": 30,
+  "sequence_frames": 20,
+  "calibration_frames": 5,
+  "light_frame_entries": 744,
+  "geometry_queries": 265,
+  "invalid_entries": 73,
+  "invalid_by_config": {
+    "L3_r0.50": 13,
+    "L3_r1.00": 30,
+    "L3_u0.50": 30
+  },
+  "planned_B2_variant_paths_before_validity_filter": 1009,
+  "eligible_B2_variant_paths_after_validity_filter": 863,
+  "B2_RGB_or_depth_images_generated": 0,
+  "team_Dataset_metadata_load": "passed",
+  "copied_camera_matrices_and_intrinsics": "exact; no held-out camera views selected",
+  "prior_geometry_tests_repeated": false,
+  "baseline_modified": false,
+  "physical_scale_verified": false
+}

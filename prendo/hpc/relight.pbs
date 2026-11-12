@@ -1,0 +1,54 @@
+#!/bin/bash
+#PBS -l select=1:ncpus=8:mem=64gb:ngpus=1:gpu_type=L40S
+#PBS -l walltime=04:00:00
+#PBS -N prendo_relight
+#PBS -j oe
+set -euo pipefail
+
+cd "${PBS_O_WORKDIR:-$HOME}"
+source "$HOME/prendo/code/PR-ENDO/hpc/env.sh"
+source "$PRENDO_CODE/hpc/train.env"
+
+RUN_ID="${RELIGHT_RUN_ID:-$(date -u +%Y%m%d-%H%M)}"
+DATA_NAME="$(basename "$PRENDO_DATA")"
+PRED_NAME="pred_${DATA_NAME}_${RUN_ID}"
+OUT_DIR="$PRENDO_ARTIFACTS/$PRED_NAME"
+mkdir -p "$PRENDO_ARTIFACTS"
+
+LOG="$PRENDO_LOGS/relight_${PRED_NAME}.log"
+exec > >(tee -a "$LOG") 2>&1
+echo "PBS_JOBID=${PBS_JOBID:-unknown}"
+echo "start $(date -u +%FT%TZ)"
+echo "data=$PRENDO_DATA model=$PRENDO_RUNS/$RUN_NAME output=$OUT_DIR"
+nvidia-smi | head -20
+
+ARGS=(
+  --data "$PRENDO_DATA"
+  --model "$PRENDO_RUNS/$RUN_NAME"
+  --iteration "$ITERATIONS"
+  --relight-dir "$PRENDO_DATA/relight"
+  --output "$OUT_DIR"
+  --run-id "$RUN_ID"
+  --code-commit "${CODE_COMMIT:-unknown}"
+)
+if [ -n "${SPOT_POWER_N:-}" ]; then
+  ARGS+=(--spot-power-n "$SPOT_POWER_N")
+fi
+if [ -n "${LEVELS:-}" ]; then
+  ARGS+=(--levels "$LEVELS")
+fi
+if [ -n "${LIMIT:-}" ]; then
+  ARGS+=(--limit "$LIMIT")
+fi
+if [ "${SKIP_TRAIN_METRICS:-0}" = "1" ]; then
+  ARGS+=(--skip-train-metrics)
+fi
+
+cd "$PRENDO_CODE"
+export PYTHONPATH="$PRENDO_CODE:${PYTHONPATH:-}"
+python tools/render_relight.py "${ARGS[@]}"
+
+tar -czf "$PRENDO_ARTIFACTS/${PRED_NAME}.tar.gz" -C "$PRENDO_ARTIFACTS" "$PRED_NAME"
+cd "$PRENDO_ARTIFACTS"
+sha256sum "${PRED_NAME}.tar.gz" | tee "${PRED_NAME}.sha256"
+echo "done $(date -u +%FT%TZ)"

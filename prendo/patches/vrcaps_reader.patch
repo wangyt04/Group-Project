@@ -1,0 +1,106 @@
+--- scene/__init__.py.orig	2026-11-11 19:23:42.794559000 +0000
++++ scene/__init__.py	2026-11-11 19:23:42.846185000 +0000
+@@ -70,6 +70,8 @@
+         
+         if "C3VD" in args.source_path:
+             scene_info=sceneLoadTypeCallbacks["colon"](args.source_path)
++        elif "VRCaps" in args.source_path or os.path.exists(os.path.join(args.source_path, "prendo_config.json")):
++            scene_info=sceneLoadTypeCallbacks["vrcaps"](args.source_path)
+         elif "Rotate" in args.source_path:
+             scene_info=sceneLoadTypeCallbacks["rotate"](args.source_path)
+         else:
+--- scene/dataset_readers.py.orig	2026-11-11 19:23:42.768271000 +0000
++++ scene/dataset_readers.py	2026-11-11 19:23:42.799324123 +0000
+@@ -650,3 +650,92 @@
+     "colon": readColonSceneInfo, #Dataset from endoGslam
+     "rotate": readRotateSceneInfo, #Dataset RotateColon
+ }
++
++########################################################################
++#### VR-Caps (or any synthetic) datareader - RotateColon layout, configurable
++# Layout (same as RotateColon):
++#   transforms.json / transforms_test.json  - camera_angle_x (+ optional fl_x, fl_y, cx, cy), frames[{file_path, transform_matrix (c2w, OpenGL axes)}]
++#   train_views/0000.png, depth_train/0000.{exr,png,tiff}, test_views_1/0000.png, init_point_cloud.ply (x, y, z)
++# Optional prendo_config.json:
++#   {"depth_scale": 1.4, "depth_channel": "ViewLayer.Depth.Z", "test_dir": "test_views_1"}
++#   gt depth used for the loss = raw depth / depth_scale, and must end up in the same units as the camera poses.
++
++def _read_depth(path_no_ext, channel):
++    for ext in (".exr", ".png", ".tiff", ".tif"):
++        p = path_no_ext + ext
++        if not os.path.exists(p):
++            continue
++        if ext == ".exr":
++            import OpenEXR
++            with OpenEXR.File(p) as infile:
++                chans = infile.channels()
++                name = channel if channel in chans else next(
++                    (c for c in chans if c.lower().endswith(".z") or c == "Z" or "depth" in c.lower()), next(iter(chans)))
++                d = np.asarray(chans[name].pixels, dtype=np.float32)
++        else:
++            d = np.array(Image.open(p), dtype=np.float32)
++        return (d[..., 0] if d.ndim == 3 else d), p
++    raise FileNotFoundError(f"no depth file for {path_no_ext}.(exr|png|tiff)")
++
++
++def _read_vrcaps_split(path, transforms_file, image_dir, depth_dir, cfg, fallback_depth=None):
++    with open(os.path.join(path, transforms_file)) as json_file:
++        contents = json.load(json_file)
++    cameras = []
++    depth = fallback_depth
++    for idx, frame in enumerate(tqdm(contents["frames"], desc=f"Loading {transforms_file}")):
++        stem = str(frame["file_path"]).zfill(4)
++        image_path = os.path.join(path, image_dir, f"{stem}.png")
++        c2w = np.array(frame["transform_matrix"], dtype=np.float64)
++        c2w[:3, 1:3] *= -1  # OpenGL/Blender axes -> COLMAP axes
++        w2c = np.linalg.inv(c2w)
++        R = np.transpose(w2c[:3, :3])
++        T = w2c[:3, 3]
++        image = Image.open(image_path).convert("RGBA")
++        w, h = image.size
++        fx = contents.get("fl_x", fov2focal(contents["camera_angle_x"], w))
++        fy = contents.get("fl_y", fx)
++        depth_path = None
++        if depth_dir:
++            raw, depth_path = _read_depth(os.path.join(path, depth_dir, stem), cfg["depth_channel"])
++            depth = Image.fromarray((raw / cfg["depth_scale"] * 255).astype(np.float32))
++        cameras.append(CameraInfo(uid=idx, R=R, T=T,
++                                  FovX=focal2fov(fx, w), FovY=focal2fov(fy, h),
++                                  image=image, depth=copy.copy(depth),
++                                  image_path=image_path, image_name=stem,
++                                  depth_path=depth_path, depth_name=depth_path,
++                                  width=w, height=h,
++                                  cx=contents.get("cx", w / 2), cy=contents.get("cy", h / 2)))
++    return cameras, depth
++
++
++def readVRCapsSceneInfo(path):
++    cfg = {"depth_scale": 1.4, "depth_channel": "ViewLayer.Depth.Z", "test_dir": "test_views_1"}
++    cfg_path = os.path.join(path, "prendo_config.json")
++    if os.path.exists(cfg_path):
++        with open(cfg_path) as f:
++            cfg.update(json.load(f))
++    print(f"VR-Caps reader config: {cfg}")
++
++    train_cameras, last_depth = _read_vrcaps_split(path, "transforms.json", "train_views", "depth_train", cfg)
++    # test views have no depth; the loss only uses train cameras
++    test_cameras, _ = _read_vrcaps_split(path, "transforms_test.json", cfg["test_dir"], None, cfg, fallback_depth=last_depth)
++
++    nerf_normalization = getNerfppNorm(train_cameras)
++
++    init_pt_cld = PlyData.read(os.path.join(path, "init_point_cloud.ply"))
++    xyz = np.stack([np.array(init_pt_cld['vertex'].data[a]) for a in "xyz"], axis=1)
++    if xyz.shape[0] > MAX_N_POINTS:
++        xyz = xyz[np.random.choice(xyz.shape[0], MAX_N_POINTS, replace=False)]
++    rgb_colors = np.tile(np.array([[188 / 255., 99 / 255., 76 / 255.]]), (len(xyz), 1))  # same tissue colour as RotateColon
++    auxiliary_ply_path = os.path.join(path, "init_point_cloud_auxiliary.ply")
++    storePly(auxiliary_ply_path, xyz, rgb_colors * 255)
++    pcd = fetchPly(auxiliary_ply_path)
++
++    return SceneInfo(point_cloud=pcd,
++                     train_cameras=train_cameras,
++                     test_cameras=test_cameras,
++                     nerf_normalization=nerf_normalization,
++                     ply_path=auxiliary_ply_path)
++
++sceneLoadTypeCallbacks["vrcaps"] = readVRCapsSceneInfo
