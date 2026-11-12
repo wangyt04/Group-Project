@@ -5,8 +5,9 @@
 - **A 训练数据**：已收到 `VRCaps_lumen_100_v2`。
 - **B1 光照参数**：已收到 `VRCaps_lumen_100_v2_relight_config`（`lights.json`、`transforms_relight.json`、`export_settings.json`）。
 - **B2 多光照 GT + 深度**：**尚未收到** `relight/gt/` 和 `relight/depth/`。
-- 按《对接说明：给负责 VR-Caps 的组员》第 2 节，B2 是 VRCaps 组员的明确交付项，**只交给 Yutong**，不交给 PRENDO。
-- PRENDO 侧现在缺的是 **聚光衰减指数 `n`**；`n` 由 Yutong 用 B2 的标定帧拟合。没有 B2 就无法拟合 `n`。
+- 按《对接说明：给负责 VR-Caps 的组员》第 2 节，**完整 B2** 是 VRCaps 组员的明确交付项，**只交给 Yutong**，不交给 PRENDO。
+- PRENDO 渲染不需要完整 B2；PRENDO 需要的是 **聚光衰减指数 `n`**。
+- `n` 由 Yutong 用 B2 的标定帧拟合；如果 PRENDO 侧代跑 `fit_spot_power.py`，只需要 B2 的 **15 个标定 EXR**，仍然不需要完整 B2。
 
 ## 1. 对接说明的要求
 
@@ -14,7 +15,10 @@
 | --- | --- | --- | --- |
 | A | 训练 RGB、深度、位姿 | PRENDO 组员 | 已收 |
 | B1 | 选帧、光照配置、每帧光源位姿 | PRENDO + Yutong | 已收 |
-| B2 | 多光照 GT 图像 + 深度 | **只给 Yutong** | **缺失** |
+| B2 | 多光照 GT 图像 + 深度（完整） | **只给 Yutong** | **缺失** |
+| B2 标定子集 | 5 帧 × L0/L2_fwd + depth，共 15 个 EXR | Yutong，或 PRENDO 侧代拟合 `n` | **缺失** |
+
+15 个标定 EXR 是 B2 的子集，只用于拟合 `n`；它不改变“完整 B2 只给 Yutong”的约定。
 
 B2 的目录格式（对接说明第 4、6.4 节）：
 
@@ -63,7 +67,7 @@ relight/depth/0097.exr
 - 线性 RGB EXR，不做色调映射/后处理；
 - 深度为线性视空间 z，float，无表面像素填 0。
 
-这 15 个文件交给 Yutong 后，Yutong 运行：
+这 15 个文件交给 Yutong 后，由 Yutong 运行（如果 PRENDO 侧代跑，也同样需要这 15 个文件；完整 B2 仍只给 Yutong）：
 
 ```bash
 cd Group-Project/relight_eval   # 或你本地仓库的对应路径
@@ -113,7 +117,8 @@ cd Group-Project/relight_eval   # 或你本地仓库的对应路径
 
 ## 5. 交付方式
 
-- B2 完整目录交给 Yutong；PRENDO 侧只需要 B1 和 A，不需要 B2 图像。
+- 完整 B2 目录交给 Yutong；PRENDO 侧渲染只需要 B1 和 A，不需要 B2 图像。
+- 如果 PRENDO 侧代拟合 `n`，额外需要 §2 的 15 个标定文件；这不是完整 B2，也不改变完整 B2 只给 Yutong 的约定。
 - 如果先交 15 个标定 EXR，请放在同一个 `VRCaps_lumen_100_v2/relight/` 下，保留 B1 的 `lights.json`、`transforms_relight.json`、`export_settings.json`。
 - 重新导出请换新版本号，不要覆盖旧目录；如果只改 `relight/`，在交付说明里注明训练数据未变。
 
