@@ -14,6 +14,12 @@ This folder contains the PR-ENDO-side code, HPC pipeline, run metadata and B1 co
 - Base commit: `ee5362817ccc944292ae43aa9f667386a5ebc069`
 - The only source change is `patches/vrcaps_reader.patch` (VR-Caps reader + dispatch branch).
 
+## C3VD vs VRCaps interface
+
+Official PR-ENDO's C3VD reader (`readColonSceneInfo`) does not read a plain C3VD folder. It derives `C3VD_endogslam_optimized/` and consumes EndoGSLAM's `params.npz` (`cam_unnorm_rots`, `cam_trans`, `intrinsics`) plus `point_cloud/iteration_*/point_cloud.ply`.
+
+VRCaps is synthetic: Unity provides GT OpenGL c2w poses, depth and a back-projected XYZ cloud. It therefore uses the RotateColon-style reader via `patches/vrcaps_reader.patch`; no EndoGSLAM is run, and the VRCaps path must not contain `C3VD`.
+
 ## Contents
 
 | Path | Contents |
