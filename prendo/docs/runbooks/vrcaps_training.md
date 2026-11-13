@@ -104,6 +104,25 @@ qsub -l walltime=04:00:00 \
 ```
 
 - Handoff description: `handoff/PRENDO_relight_handoff.md` (repo root)
+- **Superseded (2026-11-13):** the 280 L2 images in this run use the old 60° / n=23.135 profile. The new L2 delivery is run `20261113-0110` below; other levels in this run remain valid.
+
+## L2 4× supplement run record: 2026-11-13
+
+- Supplement: `L2_4x_Outer160_InnerHalf10_20261113` (7 L2 directions; `L2_yaw±40` retired)
+- Run id: `20261113-0110`; job `4633843.pbs-7`; L2-only, 220 valid entries (30 test + 5 calib cameras; 210 test comparisons)
+- Spot: 200,000 cd (intensity_scale 4 vs the 50k base), outer FULL 160° (half 80°), inner HALF 10° (full 20°), `innerSpotPercent=12.5`
+- Calibration: probe-aware fit on the independent 200k Point/Spot set (frames 0001/0032/0050/0067/0097 + ±20 probes); **n = 2.4004990755616116**, RMSE 0.02047; forward-only 2.351407, probes-only 2.414376. Old n=23.135 is invalid for this profile.
+- Staged data root: `$EPHEMERAL/prendo/data/staged_l2_4x/VRCaps_lumen_100_v2` (symlinked training data + supplement relight metadata; original root untouched)
+- Output bundle: `pred_VRCaps_lumen_100_v2_20261113-0110.tar.gz`, 878 MB
+- Output bundle sha256: `ae192089e286ba8aa6546d4d1ec91f59840e96afdacd7f136bd72be9231f0930`
+- Local extracted path: `artifacts/pred_VRCaps_lumen_100_v2_20261113-0110/`
+- Evaluation (new B2 L2 GT, 210 test comparisons): PSNR 32.99 dB, +11.56 dB vs no-relight L0, SSIM 0.9863, LPIPS 0.0823, ratio_corr 0.993; all direction checks pass. See `prendo/runs/20261113-0110/EVALUATION.md`.
+- Submission command:
+
+```bash
+bash hpc/submit_l2_4x.sh 20261113-0110 2.4004990755616116 \
+  https://github.com/wangyt04/Group-Project@43206c84356f43075dcd2d924e2fe46d7d650d93
+```
 
 ### Relight implementation notes
 

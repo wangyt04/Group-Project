@@ -1,11 +1,20 @@
 # PR-ENDO → Yutong relight handoff
 
+> **2026-11-13 update — L2 superseded.** The L2 images in the `20261112-0332` bundle use the
+> old 60° / n=23.135 profile and must not be used for the new L2 evaluation. The L2 delivery is
+> now the separate run **`20261113-0110`**: 220 entries (7 directions), 200,000 cd (4× base),
+> outer FULL 160° / inner HALF 10°, `n=2.400499`. Evaluation vs the new B2 L2 GT: PSNR 32.99 dB,
+> +11.56 dB over the no-relight L0 baseline, SSIM 0.9863, LPIPS 0.0823, ratio_corr 0.993; all
+> direction checks pass. See `prendo/runs/20261113-0110/EVALUATION.md`. `L2_yaw±40` is retired;
+> the non-L2 levels in the old bundle remain valid.
+
 ## 1. Files
 
 | File | Contents | Size | SHA256 |
 |---|---|---|---|
 | `vrcaps_lumen_100_v2_r30k_bundle.tar.gz` | V2 training run: model, checkpoints, test renders, metrics, manifest | 337 MB | `bb314d69ed15385615bf1fbe232bae679010bcf98cb75dd7cd8e5b5a2bfaeb93` |
-| `pred_VRCaps_lumen_100_v2_20261112-0332.tar.gz` | Full relight predictions (671 entries: 391 non-L2 + 280 L2) + `record.json` / `render_manifest.json` / `train_metrics.json` | 2.6 GB | `668b8622158b9b6abdfad09950914e6ced0df42efb74a08da5f49268165e13e4` |
+| `pred_VRCaps_lumen_100_v2_20261112-0332.tar.gz` | Relight predictions (671 entries: 391 non-L2 + 280 old-profile L2) + metadata; **its L2 is superseded** | 2.6 GB | `668b8622158b9b6abdfad09950914e6ced0df42efb74a08da5f49268165e13e4` |
+| `pred_VRCaps_lumen_100_v2_20261113-0110.tar.gz` | **L2 4× delivery** (220 entries: 7 directions, 30 test + 5 calib cameras) + `record.json` / `render_manifest.json` / `train_metrics.json` | 878 MB | `ae192089e286ba8aa6546d4d1ec91f59840e96afdacd7f136bd72be9231f0930` |
 
 `pred_VRCaps_lumen_100_v2_20261112-0332/` contains:
 
@@ -48,7 +57,7 @@ Source: `VRCaps_lumen_100_v2_relight_config` (B1 only; no B2 images).
 
 `L3_u0.50` and `L3_r1.00` have no valid entries (all frames failed the geometry validity check). `record.json` has `spot_power=23.13538193587864`, `iteration=30000`, train metrics PSNR 34.787 / SSIM 0.9886 / LPIPS 0.0580, and total 671 PNG+EXR pairs.
 
-## 5. L2 calibration and completion
+## 5. L2 calibration and completion (old 60° profile; superseded 2026-11-13)
 
 L2's 280 entries were rendered with **n=23.13538193587864**, fitted from the B2 calibration frames `0001, 0032, 0050, 0067, 0097` (L0 and L2_fwd noshadow + depth). Fit RMSE is 0.019458; see `prendo/runs/20261112-0332/calibration/spot_fit.png`.
 

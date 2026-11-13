@@ -53,8 +53,9 @@ The HPC scripts contain the Imperial CX3 paths for user `yl15425` (`hpc/paths.sh
 - Training data: `VRCaps_lumen_100_v2` (point-light training data, 88 train / 12 test).
 - B1 configuration: `VRCaps_lumen_100_v2_relight_config` (25 configs, 49 relight cameras, 744 `(config, frame)` entries, 671 valid, 73 invalid L3).
 - Training: 30,000 iterations, resolution 1, 213,091 Gaussians. Test metrics: PSNR 33.64 / SSIM 0.99 / LPIPS 0.06. Training-frame metrics: PSNR 34.787 / SSIM 0.9886 / LPIPS 0.0580.
-- Relight run `20261112-0332`: **671 valid `(config, frame)` pairs** (391 non-L2 + 280 L2; PNG + EXR). L2 was rendered with `n=23.13538193587864`; calibration artifacts are in `runs/20261112-0332/calibration/`.
-- The exact code commit and run command are recorded in `runs/20261112-0332/record.json` and `runs/vrcaps_lumen_100_v2_r30k/command.txt`.
+- Relight run `20261112-0332`: **671 valid `(config, frame)` pairs** (391 non-L2 + 280 L2; PNG + EXR). Its L2 images use the old 60° / n=23.135 profile and are **superseded**; the non-L2 levels remain valid.
+- **L2 4× run `20261113-0110`**: **220 L2 entries** (7 directions, 30 test + 5 calib frames), 200,000 cd (4× base), outer full 160° / inner half 10°, `n=2.400499`. Evaluation vs the new B2 L2 GT: **PSNR 32.99 dB, +11.56 dB over the no-relight L0 baseline, SSIM 0.9863, LPIPS 0.0823, ratio_corr 0.993**; all direction checks pass. See `runs/20261113-0110/EVALUATION.md` and `runs/20261113-0110/calibration/`.
+- The exact code commit and run command are recorded in `runs/20261112-0332/record.json`, `runs/20261113-0110/record.json`, and `runs/vrcaps_lumen_100_v2_r30k/command.txt`.
 - B2 GT images are not part of the PRENDO delivery; Yutong receives them from the VRCaps group.
 
 ## Notes
