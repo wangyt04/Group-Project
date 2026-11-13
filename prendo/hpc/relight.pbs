@@ -9,6 +9,12 @@ cd "${PBS_O_WORKDIR:-$HOME}"
 source "$HOME/prendo/code/PR-ENDO/hpc/env.sh"
 source "$PRENDO_CODE/hpc/train.env"
 
+# Optional staged data root (e.g. an L2-only supplement). train.env keeps the
+# default for all other runs; this override is opt-in via qsub -v DATA_DIR=...
+if [ -n "${DATA_DIR:-}" ]; then
+  export PRENDO_DATA="${DATA_DIR}"
+fi
+
 RUN_ID="${RELIGHT_RUN_ID:-$(date -u +%Y%m%d-%H%M)}"
 DATA_NAME="$(basename "$PRENDO_DATA")"
 PRED_NAME="pred_${DATA_NAME}_${RUN_ID}"

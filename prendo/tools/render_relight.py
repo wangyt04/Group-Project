@@ -117,6 +117,7 @@ def main() -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     lights = load_json(relight_dir / "lights.json")
+    supplement = lights.get("supplement_version")
     relight_meta = load_json(relight_dir / "transforms_relight.json")
     relight_frames = {str(f["file_path"]).zfill(4): f for f in relight_meta["frames"]}
     configs = {c["id"]: c for c in lights["configs"]}
@@ -224,15 +225,23 @@ def main() -> int:
     command_path = model / "command.txt"
     train_command = command_path.read_text(encoding="utf-8").strip() if command_path.exists() else ""
 
+    l2_cfgs = [c for c in configs.values() if c.get("level") == "L2"]
+    l2_scales = sorted({float(c.get("intensity_scale", 1.0)) for c in l2_cfgs})
+    l2_angles = sorted({(c.get("spot_inner_deg"), c.get("spot_outer_deg")) for c in l2_cfgs}, key=str)
     notes = [
-        "B1 configuration: VRCaps_lumen_100_v2_relight_config",
-        f"valid frame entries in B1: {len(entries)}; invalid skipped: {invalid_count}",
+        f"configuration: {supplement}" if supplement else "B1 configuration: VRCaps_lumen_100_v2_relight_config",
+        f"valid frame entries in lights.json: {len(entries)}; invalid skipped: {invalid_count}",
         f"rendered this run: {rendered}; total PNG pairs in output: {total_png}",
         "shadow/noshadow variants merged: one image per (config, frame)",
         "mask companion not applied; masks are not used by the reader",
         "test depth is an internal placeholder, not test ground truth",
         "physical/numerical scale unverified; mm_per_unit is null",
     ]
+    if l2_cfgs:
+        notes.append(f"L2 intensity_scale: {l2_scales}")
+        if len(l2_angles) == 1:
+            inner, outer = l2_angles[0]
+            notes.append(f"L2 spot half-angles: inner={inner}, outer={outer}")
     if skipped_l2_no_n:
         notes.append(f"L2 skipped: spot_power_n is null (entries skipped: {skipped_l2_no_n})")
     if n is not None:
@@ -262,6 +271,9 @@ def main() -> int:
         "output": str(out_dir),
         "levels": sorted(levels) if levels is not None else None,
         "spot_power_n": n,
+        "lights_supplement": supplement,
+        "l2_intensity_scales": l2_scales if l2_cfgs else None,
+        "l2_spot_half_angles": [list(a) for a in l2_angles] if l2_cfgs else None,
         "valid_entries_total": len(entries),
         "invalid_skipped": invalid_count,
         "skipped_l2_no_n": skipped_l2_no_n,
