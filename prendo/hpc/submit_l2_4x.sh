@@ -25,7 +25,8 @@ OUT="${ART}/pred_VRCaps_lumen_100_v2_${RUN_ID}"
 test -f "$SRC/transforms.json"
 test -f "$META"
 mkdir -p "$STAGE/relight"
-for x in train_views depth_train transforms.json transforms_test.json init_point_cloud.ply prendo_config.json; do
+for x in train_views test_views_1 depth_train transforms.json transforms_test.json \
+         init_point_cloud.ply prendo_config.json sidecars optional_mask_support; do
   ln -sfn "$SRC/$x" "$STAGE/$x"
 done
 rm -f "$STAGE/relight/lights.json" "$STAGE/relight/transforms_relight.json" "$STAGE/relight/export_settings.json"
