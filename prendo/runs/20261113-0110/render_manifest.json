@@ -1,0 +1,42 @@
+{
+  "run_id": "20261113-0110",
+  "dataset": "VRCaps_lumen_100_v2",
+  "model": "/rds/general/ephemeral/user/yl15425/ephemeral/prendo/runs/vrcaps_lumen_100_v2_r30k",
+  "iteration": 30000,
+  "relight_dir": "/rds/general/ephemeral/user/yl15425/ephemeral/prendo/data/staged_l2_4x/VRCaps_lumen_100_v2/relight",
+  "output": "/rds/general/user/yl15425/home/prendo/artifacts/pred_VRCaps_lumen_100_v2_20261113-0110",
+  "levels": [
+    "L2"
+  ],
+  "spot_power_n": 2.4004990755616116,
+  "lights_supplement": "L2_4x_Outer160_InnerHalf10_20261113",
+  "l2_intensity_scales": [
+    4.0
+  ],
+  "l2_spot_half_angles": [
+    [
+      10,
+      80
+    ]
+  ],
+  "valid_entries_total": 220,
+  "invalid_skipped": 0,
+  "skipped_l2_no_n": 0,
+  "rendered_this_run": 220,
+  "total_png_pairs_in_output": 220,
+  "rendered_configs": [
+    "L2_fwd",
+    "L2_pitch+20",
+    "L2_pitch-20",
+    "L2_yaw+10",
+    "L2_yaw+20",
+    "L2_yaw-10",
+    "L2_yaw-20"
+  ],
+  "train_metrics": {
+    "num_views": 88,
+    "psnr": 34.78707311370156,
+    "ssim": 0.9885698360475627,
+    "lpips": 0.05804164241999388
+  }
+}

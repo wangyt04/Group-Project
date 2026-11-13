@@ -1,0 +1,13 @@
+{
+  "dataset": "VRCaps_lumen_100_v2",
+  "prendo_commit": "ee5362817ccc944292ae43aa9f667386a5ebc069",
+  "code_commit": "https://github.com/wangyt04/Group-Project@43206c84356f43075dcd2d924e2fe46d7d650d93",
+  "train_command": "python train_viewdir.py --model_path /rds/general/user/yl15425/ephemeral/prendo/runs/vrcaps_lumen_100_v2_r30k -s /rds/general/user/yl15425/ephemeral/prendo/data/VRCaps_lumen_100_v2 --eval --resolution 1 --iteration 30000 --lambda_depth 0.2 --lambda_norm 0.1 --albedo_loss_weight 1.0 --densification_interval 1000 --opacity_reset_interval 3000 --densify_until_iter 10000 --densify_from_iter 1000 --mlp_lr 0.0005 --grid_lr 0.0005 --end_diffuse_loss_iter 20000 --port 6000 --K_normals 30 --diffuse_loss_weight 0.01",
+  "iteration": 30000,
+  "depth_scale": 1.0,
+  "spot_power": 2.4004990755616116,
+  "train_psnr": 34.78707311370156,
+  "train_ssim": 0.9885698360475627,
+  "train_lpips": 0.05804164241999388,
+  "notes": "configuration: L2_4x_Outer160_InnerHalf10_20261113 | valid frame entries in lights.json: 220; invalid skipped: 0 | rendered this run: 220; total PNG pairs in output: 220 | shadow/noshadow variants merged: one image per (config, frame) | mask companion not applied; masks are not used by the reader | test depth is an internal placeholder, not test ground truth | physical/numerical scale unverified; mm_per_unit is null | L2 intensity_scale: [4.0] | L2 spot half-angles: inner=10, outer=80 | L2 rendered with spot_power_n=2.4004990755616116"
+}

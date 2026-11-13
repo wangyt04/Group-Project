@@ -1,0 +1,39 @@
+{
+  "predictions_complete": {
+    "status": "pass",
+    "summary": "every valid entry has a prediction",
+    "missing": []
+  },
+  "record_dataset": {
+    "status": "pass",
+    "summary": "record.json says VRCaps_lumen_100_v2, comparing against VRCaps_lumen_100_v2"
+  },
+  "spot_power": {
+    "status": "pass",
+    "summary": "record 2.4004990755616116 vs calibration 2.4005"
+  },
+  "direction_L2_pitch+20": {
+    "status": "pass",
+    "summary": "brightening on the same side in 100% of 30 frames, ratio_corr +1.00"
+  },
+  "direction_L2_pitch-20": {
+    "status": "pass",
+    "summary": "brightening on the same side in 100% of 30 frames, ratio_corr +0.99"
+  },
+  "direction_L2_yaw+10": {
+    "status": "pass",
+    "summary": "brightening on the same side in 100% of 30 frames, ratio_corr +1.00"
+  },
+  "direction_L2_yaw+20": {
+    "status": "pass",
+    "summary": "brightening on the same side in 100% of 30 frames, ratio_corr +1.00"
+  },
+  "direction_L2_yaw-10": {
+    "status": "pass",
+    "summary": "brightening on the same side in 100% of 30 frames, ratio_corr +0.99"
+  },
+  "direction_L2_yaw-20": {
+    "status": "pass",
+    "summary": "brightening on the same side in 100% of 30 frames, ratio_corr +0.99"
+  }
+}
