@@ -81,7 +81,7 @@ L0 重建上限约 1.2 dB；比“不重光照”的 L0 渲染高 10–12.5 dB�
 ## 产物
 
 - 预测 bundle：`pred_VRCaps_lumen_100_v2_20261113-0110.tar.gz`
-  sha256 `ae192089e286ba8aa6546d4d1ec91f59840e96afdacd7f136bd72be9231f0930`（878 MB）
+  sha256 `ae192089e286ba8aa6546d4d1ec91f59840e96afdacd7f136bd72be9231f0930`（1.0 GB，1,070,259,588 字节）
 - 本地渲染数据：`PR-ENDO/artifacts/pred_VRCaps_lumen_100_v2_20261113-0110/`（220 PNG + 220 EXR）
 - 评估输出：`prendo/runs/20261113-0110/eval/VRCaps_lumen_100_v2/L2_4x/`
   （`per_image.csv`、`summary.csv`、`summary_levels.csv`、`checks.json`、`curves/`、`panels/`）

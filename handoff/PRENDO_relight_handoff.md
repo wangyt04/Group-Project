@@ -14,7 +14,7 @@
 |---|---|---|---|
 | `vrcaps_lumen_100_v2_r30k_bundle.tar.gz` | V2 training run: model, checkpoints, test renders, metrics, manifest | 337 MB | `bb314d69ed15385615bf1fbe232bae679010bcf98cb75dd7cd8e5b5a2bfaeb93` |
 | `pred_VRCaps_lumen_100_v2_20261112-0332.tar.gz` | Relight predictions (671 entries: 391 non-L2 + 280 old-profile L2) + metadata; **its L2 is superseded** | 2.6 GB | `668b8622158b9b6abdfad09950914e6ced0df42efb74a08da5f49268165e13e4` |
-| `pred_VRCaps_lumen_100_v2_20261113-0110.tar.gz` | **L2 4× delivery** (220 entries: 7 directions, 30 test + 5 calib cameras) + `record.json` / `render_manifest.json` / `train_metrics.json` | 878 MB | `ae192089e286ba8aa6546d4d1ec91f59840e96afdacd7f136bd72be9231f0930` |
+| `pred_VRCaps_lumen_100_v2_20261113-0110.tar.gz` | **L2 4× delivery** (220 entries: 7 directions, 30 test + 5 calib cameras) + `record.json` / `render_manifest.json` / `train_metrics.json` | 1.0 GB | `ae192089e286ba8aa6546d4d1ec91f59840e96afdacd7f136bd72be9231f0930` |
 
 `pred_VRCaps_lumen_100_v2_20261112-0332/` contains:
 
