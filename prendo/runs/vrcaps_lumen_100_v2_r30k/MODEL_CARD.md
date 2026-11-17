@@ -29,7 +29,7 @@ Folder on OneDrive: `PRENDO/vrcaps_lumen_100_v2_r30k/`
 | `vrcaps_lumen_100_v2_r30k_bundle.tar.gz` | 337 MB | `bb314d69ed15385615bf1fbe232bae679010bcf98cb75dd7cd8e5b5a2bfaeb93` |
 | `vrcaps_lumen_100_v2_r30k_bundle.sha256` | 105 B | — |
 | `vrcaps_lumen_100_v2_r30k_model_only.tar.gz` (optional, quick model-only copy) | 12 MB | `24778f363278695df280e584d22bb9e7ff9630318e7cee69a26bf498b11c39db` |
-| `vrcaps_lumen_100_v2_r30k_model_only.tar.gz.sha256` | 123 B | — |
+| `vrcaps_lumen_100_v2_r30k_model_only.tar.gz.sha256` | 109 B | — |
 | `MODEL_CARD.md` | this file | — |
 
 Local paths:
