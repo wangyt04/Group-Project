@@ -1,0 +1,17 @@
+{
+  "label": "baseline",
+  "model": "/rds/general/ephemeral/user/yl15425/ephemeral/prendo/runs/vrcaps_lumen_100_v2_r30k",
+  "iteration": 30000,
+  "ply": "/rds/general/ephemeral/user/yl15425/ephemeral/prendo/runs/vrcaps_lumen_100_v2_r30k/point_cloud/iteration_30000/point_cloud.ply",
+  "n_points": 213091,
+  "mean": 0.04999997466802597,
+  "std": 0.0,
+  "min": 0.04999997466802597,
+  "p1": 0.04999997466802597,
+  "p25": 0.04999997466802597,
+  "median": 0.04999997466802597,
+  "p75": 0.04999997466802597,
+  "p99": 0.04999997466802597,
+  "max": 0.04999997466802597,
+  "unique_rounded_6dp": 1
+}

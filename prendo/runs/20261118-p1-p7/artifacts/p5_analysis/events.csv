@@ -1,0 +1,20 @@
+iteration,reason,count,near_wall_removed,npz,detail
+2000,densify_prune,26850,1145,iter_002000_densify_prune_001.npz,{"opacity": 26850}
+2000,split,969,118,iter_002000_split_000.npz,{}
+3000,densify_prune,3795,101,iter_003000_densify_prune_003.npz,{"opacity": 3795}
+3000,opacity_reset,271744,34410,iter_003000_opacity_reset_004.npz,{"threshold": 0.01}
+3000,split,1278,63,iter_003000_split_002.npz,{}
+4000,densify_prune,42596,32706,iter_004000_densify_prune_006.npz,{"opacity": 42596
+4000,split,1084,30,iter_004000_split_005.npz,{}
+5000,densify_prune,4819,181,iter_005000_densify_prune_008.npz,{"opacity": 4819
+5000,split,1140,26,iter_005000_split_007.npz,{}
+6000,densify_prune,5564,158,iter_006000_densify_prune_010.npz,{"opacity": 5564
+6000,opacity_reset,222270,1437,iter_006000_opacity_reset_011.npz,{"threshold": 0.01}
+6000,split,975,21,iter_006000_split_009.npz,{}
+7000,densify_prune,5459,148,iter_007000_densify_prune_013.npz,{"opacity": 5459
+7000,split,896,18,iter_007000_split_012.npz,{}
+8000,densify_prune,2473,72,iter_008000_densify_prune_015.npz,{"opacity": 2473
+8000,split,944,18,iter_008000_split_014.npz,{}
+9000,densify_prune,3162,60,iter_009000_densify_prune_017.npz,{"opacity": 3162
+9000,opacity_reset,214237,1217,iter_009000_opacity_reset_018.npz,{"threshold": 0.01}
+9000,split,931,16,iter_009000_split_016.npz,{}

@@ -1,0 +1,91 @@
+{
+  "predictions_complete": {
+    "status": "pass",
+    "summary": "every valid entry has a prediction",
+    "missing": []
+  },
+  "record_dataset": {
+    "status": "pass",
+    "summary": "record.json says VRCaps_lumen_100_v2, comparing against VRCaps_lumen_100_v2"
+  },
+  "spot_power": {
+    "status": "pass",
+    "summary": "record 2.4004990755616116 vs calibration 2.4005"
+  },
+  "scale_L1_s0.5": {
+    "status": "pass",
+    "summary": "ratio bias +0.000, PSNR 42.12 vs scaled L0 render 42.11"
+  },
+  "scale_L1_s2.0": {
+    "status": "pass",
+    "summary": "ratio bias -0.001, PSNR 41.61 vs scaled L0 render 41.54"
+  },
+  "direction_L2_pitch+20": {
+    "status": "pass",
+    "summary": "brightening on the same side in 100% of 30 frames, ratio_corr +1.00"
+  },
+  "direction_L2_pitch-20": {
+    "status": "pass",
+    "summary": "brightening on the same side in 100% of 30 frames, ratio_corr +1.00"
+  },
+  "direction_L2_yaw+10": {
+    "status": "pass",
+    "summary": "brightening on the same side in 100% of 30 frames, ratio_corr +1.00"
+  },
+  "direction_L2_yaw+20": {
+    "status": "pass",
+    "summary": "brightening on the same side in 100% of 30 frames, ratio_corr +1.00"
+  },
+  "direction_L2_yaw-10": {
+    "status": "pass",
+    "summary": "brightening on the same side in 100% of 30 frames, ratio_corr +1.00"
+  },
+  "direction_L2_yaw-20": {
+    "status": "pass",
+    "summary": "brightening on the same side in 100% of 30 frames, ratio_corr +1.00"
+  },
+  "direction_L3_f+0.25": {
+    "status": "pass",
+    "summary": "brightening on the same side in 100% of 30 frames, ratio_corr +0.89"
+  },
+  "direction_L3_f-0.25": {
+    "status": "pass",
+    "summary": "brightening on the same side in 100% of 30 frames, ratio_corr +0.92"
+  },
+  "direction_L3_r0.10": {
+    "status": "pass",
+    "summary": "brightening on the same side in 100% of 30 frames, ratio_corr +0.81"
+  },
+  "direction_L3_r0.25": {
+    "status": "pass",
+    "summary": "brightening on the same side in 100% of 30 frames, ratio_corr +0.92"
+  },
+  "direction_L3_r0.50": {
+    "status": "pass",
+    "summary": "brightening on the same side in 100% of 17 frames, ratio_corr +0.97"
+  },
+  "direction_L3_u0.25": {
+    "status": "pass",
+    "summary": "brightening on the same side in 97% of 30 frames, ratio_corr +0.89"
+  },
+  "scale_L4_blue": {
+    "status": "fail",
+    "summary": "ratio bias -0.000, PSNR 40.93 vs scaled L0 render 41.95"
+  },
+  "scale_L4_green": {
+    "status": "fail",
+    "summary": "ratio bias -0.001, PSNR 41.03 vs scaled L0 render 42.00"
+  },
+  "scale_L4_red": {
+    "status": "fail",
+    "summary": "ratio bias -0.000, PSNR 41.24 vs scaled L0 render 42.06"
+  },
+  "direction_L5_seg1": {
+    "status": "pass",
+    "summary": "brightening on the same side in 100% of 9 frames, ratio_corr +0.73"
+  },
+  "direction_L5_seg2": {
+    "status": "pass",
+    "summary": "brightening on the same side in 100% of 9 frames, ratio_corr +0.74"
+  }
+}

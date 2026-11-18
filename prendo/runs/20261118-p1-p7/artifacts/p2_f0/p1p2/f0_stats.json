@@ -1,0 +1,17 @@
+{
+  "label": "p1p2",
+  "model": "/rds/general/ephemeral/user/yl15425/ephemeral/prendo/runs/vrcaps_lumen_100_v2_p1p2_nearcull_f0_003_r30k",
+  "iteration": 30000,
+  "ply": "/rds/general/ephemeral/user/yl15425/ephemeral/prendo/runs/vrcaps_lumen_100_v2_p1p2_nearcull_f0_003_r30k/point_cloud/iteration_30000/point_cloud.ply",
+  "n_points": 272940,
+  "mean": 0.04590169700697169,
+  "std": 0.0006431546226686602,
+  "min": -0.04066876694560051,
+  "p1": 0.045877931229770186,
+  "p25": 0.04590227082371712,
+  "median": 0.0459030456840992,
+  "p75": 0.04590517282485962,
+  "p99": 0.04598852638155222,
+  "max": 0.08428459614515305,
+  "unique_rounded_6dp": 977
+}
