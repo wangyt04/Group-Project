@@ -1,0 +1,240 @@
+{
+  "_comment": "Single source of truth for every number quoted in the presentation. Each entry names the run / document it came from so a reviewer can trace it.",
+  "provenance": {
+    "evidence_doc": "PR-ENDO/docling_PR-ENDO 重光照：实验清单与原因评估.md (Nov 17 2026, 32 CPU-side experiments A01-A17 / B01-B15)",
+    "baseline_run": "Group-Project/prendo/runs/vrcaps_lumen_100_v2_r30k (30k, original 0.2 near-cull)",
+    "l2_run": "Group-Project/prendo/runs/20261113-0110 (L2 4x re-render, same model)",
+    "p1_run": "Group-Project/prendo/runs/20261118-p1-p7 (P1/P2/P4/P5/P7 on Imperial CX3 L40S)",
+    "paper": "arXiv:2411.12510 PR-ENDO (Kaleta et al.), code commit ee53628"
+  },
+
+  "dataset": {
+    "name": "VRCaps_lumen_100_v2",
+    "renderer": "Unity HDRP (VR-Caps virtual capsule-endoscopy environment)",
+    "resolution": [1350, 1080],
+    "frames_total": 100,
+    "split_train": 88,
+    "split_test": 12,
+    "trajectory": "5 s at 20 fps, 100 views sampled including endpoints",
+    "light": "single white HDRP Point light at the camera optical centre, offset (0,0,0)",
+    "intensity_candela": 50000.0,
+    "exposure_EV100": 20.0,
+    "range_world_units": 6.71999979019165,
+    "d_ref_world_units": 0.33595186471939087,
+    "d_ref_method": "median finite positive axial depth over valid training pixels",
+    "shadows": false,
+    "indirect_illumination": false,
+    "tone_mapping": false,
+    "encoding": "round(255 * clamp(exposed_linear_RGB,0,1)^(1/2.2)) as RGB8 PNG",
+    "max_saturated_fraction_per_frame": 0.0011893093843643539,
+    "init_points": 300000,
+    "physical_scale_verified": false
+  },
+
+  "relight_protocol": {
+    "configs_total": 25,
+    "levels": {
+      "L0": "baseline light unchanged -> pure reconstruction / novel-view quality (1 config)",
+      "L1": "light intensity scaled x0.5 and x2.0 (2 configs)",
+      "L2": "Point -> Spot at the camera centre, beam direction rotated (9 planned, 7 used in the final 4x protocol)",
+      "L3": "light translated off the camera centre by multiples of d_ref along camera right/up/forward (8 configs)",
+      "L4": "light linear RGB scaled -> red / green / blue (3 configs)",
+      "L5": "world-fixed light at the first camera centre of a 10-frame segment, camera keeps moving (2 configs)"
+    },
+    "unique_cameras": 49,
+    "main_frames": 30,
+    "sequence_frames": 20,
+    "calibration_frames": 5,
+    "entries_valid_B1": 671,
+    "entries_invalid_geometry": 73,
+    "entries_P1_protocol": 611,
+    "entries_P1_breakdown": "391 non-L2 + 220 L2 (7 directions)",
+    "gt_variant_comparisons_P1": 803,
+    "gt_images_eligible": 863,
+    "l2_4x": {
+      "intensity_candela": 200000,
+      "outer_cone_full_deg": 160,
+      "inner_cone_half_deg": 10,
+      "innerSpotPercent": 12.5,
+      "fitted_cos_power_n": 2.4004990755616116,
+      "fit_rmse": 0.02047,
+      "old_l2_cone_full_deg": 60,
+      "old_l2_cos_power_n": 23.13538193587864
+    }
+  },
+
+  "efficiency": {
+    "prendo_train_steps": 30000,
+    "prendo_train_walltime_s": 1131,
+    "prendo_train_gpu": "NVIDIA L40S",
+    "_timing_source": "artifacts/vrcaps_lumen_100_v2_r30k/{job_info.json,render_time.txt} - the v2 run, not the earlier v1 lumen_100 run",
+    "prendo_peak_vram_gb": 9.18,
+    "prendo_render_ms_per_frame": 5.46,
+    "prendo_render_fps": 183.2,
+    "prendo_render_resolution": [1350, 1080],
+    "unity_render_time": null,
+    "unity_render_time_note": "NOT MEASURED - ask the VR-Caps member for s/frame on their laptop for the 863-image B2 export"
+  },
+
+  "baseline_model": {
+    "gaussians": 213091,
+    "test_psnr_30k": 33.640095233917236,
+    "test_psnr_10k": 33.17,
+    "train_psnr": 34.78707311370156,
+    "train_ssim": 0.9885698360475627,
+    "train_lpips": 0.05804164241999388,
+    "spatial_lr_scale": 0.0995,
+    "sh_degree": 0,
+    "use_hg": false
+  },
+
+  "root_cause": {
+    "code_location": "submodules/depth-diff-gaussian-rasterization/cuda_rasterizer/auxiliary.h:154",
+    "code_line": "if (p_view.z <= 0.2f)",
+    "submodule_commit": "8fa430b",
+    "znear": 0.01,
+    "threshold_world_units": 0.2,
+    "threshold_in_d_ref": 0.595,
+    "culled_pixel_fraction": 0.174,
+    "share_of_L0_squared_error": 0.79,
+    "share_of_L0_squared_error_second_half": 0.94,
+    "share_of_L3_squared_error_range": [0.61, 0.92],
+    "share_of_L1_x2_squared_error": 0.80,
+    "never_rendered_points": 33892,
+    "never_rendered_fraction": 0.113,
+    "curtain_render_depth_median": 0.232,
+    "curtain_true_depth_median": 0.137,
+    "curtain_weight_from_z_below_0_25": 1.0
+  },
+
+  "p5_prune_timeline": {
+    "definition": "near-wall = projects into frame 0010 with 0 < z <= 0.2",
+    "iters":        [0,      1000,   2000,   3000,   4000,   5000,   6000,   10000,  30000],
+    "points":       [300000, 300000, 300000, 274172, 271744, 230328, 226749, 214237, 214237],
+    "near_wall":    [35432,  35457,  35471,  34444,  34405,  1721,   1571,   1206,   1196],
+    "near_wall_frac":[0.1181,0.1182, 0.1182, 0.1256, 0.1266, 0.0075, 0.0069, 0.0056, 0.0056],
+    "prune_at_4000_total_removed": 42596,
+    "prune_at_4000_near_wall_removed": 32706,
+    "opacity_reset_at_3000_touched": 271744,
+    "mechanism": "opacity reset to 0.01 every 3000 steps; the 4000-step densify/prune then drops everything below 0.05. Near-wall Gaussians never received gradient (median opacity still at the 0.100 init vs 0.304 elsewhere), so they never recovered."
+  },
+
+  "p1_training": {
+    "patch": "auxiliary.h: p_view.z <= 0.2f -> 0.01f, isolated build at $HOME/prendo/envs/nearcull",
+    "iters": [1000, 10000, 20000, 30000],
+    "p1_test_psnr": [36.71, 39.66, 41.19, 41.68],
+    "p1p2_test_psnr": [34.70, 39.51, 40.99, 41.23],
+    "p1_points": [300000, 270724, 270724, 270724],
+    "p1p2_points": [300000, 272940, 272940, 272940],
+    "baseline_test_psnr_30k": 33.64,
+    "baseline_points": 213091,
+    "p1_gain_db": 8.04
+  },
+
+  "p1_vs_baseline_611": {
+    "levels": ["L0", "L1", "L2", "L3", "L4", "L5"],
+    "p1_psnr":       [42.51, 41.87, 39.99, 34.20, 41.07, 42.01],
+    "baseline_psnr": [34.48, 34.31, 32.99, 28.41, 35.12, 35.15],
+    "gain_db":       [8.03,  7.56,  7.00,  5.79,  5.95,  6.86],
+    "ratio_corr":    [null,  null,  0.998, 0.902, null,  0.735],
+    "ratio_rmse":    [null,  0.020, 0.051, 0.144, 0.021, 0.037],
+    "note": "611 entries, 803 GT variant comparisons, 0 missing. L4 scale check fails by 0.8-1.0 dB (threshold 0.5 dB) with ratio_bias ~0; recorded as a low-amplitude residual."
+  },
+
+  "near_vs_far": {
+    "definition": "near-wall = GT axial depth <= 0.2 world units (= 0.595 d_ref); far = > 0.2",
+    "L0": {
+      "baseline": {"all": 34.48, "near": 27.74, "far": 42.59},
+      "p1":       {"all": 42.43, "near": 41.28, "far": 43.41}
+    },
+    "L3": {
+      "baseline": {"near": 21.51, "far": 35.23},
+      "p1":       {"near": 30.69, "far": 36.47}
+    },
+    "gap_baseline_db": 14.85,
+    "gap_p1_db": 2.13
+  },
+
+  "p4_diagnostics": {
+    "views": 49,
+    "models": ["baseline", "p1", "p1p2"],
+    "render_over_gt_depth_near": [1.596, 0.985, 0.985],
+    "render_over_gt_depth_far": [0.992, 0.991, 0.991],
+    "L0_top01pct": [0.998, 1.000, 1.000],
+    "specular_only_top01pct": [0.993, 0.997, 0.992],
+    "specular_only_nonzero_fraction": [0.117, 0.067, 0.066]
+  },
+
+  "p2_f0": {
+    "clamp_in_code": "scene/gaussian_model.py:182  torch.clamp(self.F_0, 0, 0.035)",
+    "paper_value": 0.03,
+    "baseline": {"mean": 0.050000, "std": 0.0, "unique": 1},
+    "p1":       {"mean": 0.050000, "std": 0.0, "unique": 1},
+    "p1p2":     {"mean": 0.045902, "std": 0.000643, "min": -0.040669, "max": 0.084285, "unique": 977},
+    "verdict": "F0 stops being spatially constant, but the mean is still above the 0.035 clamp and the specular-only renders did not get brighter. Highlight weakness is not caused by the F0 init."
+  },
+
+  "p7_attenuation": {
+    "formula": "att(d) = 1 / (1 + k * d^p)",
+    "code_location": "scene/gaussian_model.py:280",
+    "models": ["baseline", "p1", "p1p2"],
+    "intensity": [2.480, 2.728, 2.753],
+    "k": [0.598, 0.689, 0.677],
+    "p": [1.973, 1.967, 1.964],
+    "local_exponent_at_0_45_0_6_1_0_1_3_d_ref": {
+      "baseline": [1.14, 1.39, 1.71, 1.81],
+      "p1": [1.20, 1.44, 1.74, 1.82],
+      "p1p2": [1.19, 1.44, 1.73, 1.82]
+    },
+    "falloff_ratio_1_3_over_0_45": {"baseline": 5.10, "p1": 5.31, "p1p2": 5.27, "unity_inverse_square": 8.35},
+    "verdict": "The learned attenuation stays flatter than inverse square at short range even after P1. This is a limitation of the 1/(1+k d^p) form itself, not of the curtain Gaussians."
+  },
+
+  "specular": {
+    "L0_top01pct_unity": 0.298,
+    "L0_top01pct_prendo": 0.141,
+    "stays_in_place_after_r0.25_unity": 0.20,
+    "stays_in_place_after_r0.25_prendo": 0.40,
+    "new_highlight_intensity_retained_unity": 0.96,
+    "new_highlight_intensity_retained_prendo": 0.51,
+    "roughness_all_points": 0.1227,
+    "ggx_lobe_hwhm_deg": 0.55,
+    "normal_error_median_deg": 4.0,
+    "points_at_scale_cap_fraction": 0.108
+  },
+
+  "l2_4x_oldmodel": {
+    "configs": ["L2_fwd", "L2_yaw+10", "L2_yaw-10", "L2_yaw+20", "L2_yaw-20", "L2_pitch+20", "L2_pitch-20"],
+    "psnr":      [32.57, 31.98, 33.58, 31.68, 34.67, 31.96, 34.46],
+    "unrelit_psnr":[21.19, 19.98, 22.67, 19.22, 23.06, 19.75, 24.09],
+    "gain_db":   [11.38, 12.00, 10.91, 12.46, 11.62, 12.21, 10.37],
+    "mean_R":    [0.57, 0.68, 0.44, 0.75, 0.31, 0.68, 0.34],
+    "mean_psnr": 32.99,
+    "mean_ssim": 0.9863,
+    "mean_lpips": 0.0823,
+    "mean_ratio_corr": 0.993,
+    "mean_ratio_rmse": 0.068,
+    "mean_ratio_bias": -0.014,
+    "direction_agreement": 1.0,
+    "p1_l2_mean_psnr": 39.99,
+    "p1_l2_range": [39.05, 40.33]
+  },
+
+  "paper_claims": {
+    "innovations": [
+      "exploits the endoscopy-specific fact that a single light source is co-located with the camera, so the light model can be tied to the camera pose",
+      "replaces baked-in appearance with a physically based relightable Gaussian model: per-Gaussian albedo a, roughness r, base reflectivity F0, plus Cook-Torrance GGX specular",
+      "a dedicated diffuseMLP theta(l_i, d_i, n_i) * a_i / pi that takes light direction, light distance and Gaussian normal, with input noise for robustness - this is what survives the restricted endoscopic camera trajectory",
+      "two new losses: L_Diffuse ties the MLP irradiance to the classic point-light transport equation, L_Tissue regularises albedo/roughness/F0 so lighting does not leak into base colour",
+      "optional HashGrid encoding of the light position (improves along-trajectory fit, hurts generalisation under large rotations)",
+      "final shading: RGB = I * att(d) * (f_diffuseMLP * (1 - F) + f_specular) * (n . l)"
+    ],
+    "problem_solved": "standard 3DGS (and GaussianPancakes) bake the camera-attached illumination into per-Gaussian colour, so a novel view under restricted endoscopic trajectories produces floaters, decolorized fragments and lighting that does not respond to a moved light. PR-ENDO separates light from tissue, so the light can be moved, dimmed, recoloured, or turned into a spotlight after training, and tissue/geometry can be deformed with a physically consistent response.",
+    "benchmarks": {
+      "C3VD": {"3DGS": 33.90, "EndoGSLAM": 22.16, "GaussianPancakes": 33.12, "GaussianShader": 29.82, "3DGS-DR": 33.77, "PR-ENDO": 34.24},
+      "RotateColon": {"3DGS": 20.29, "GaussianPancakes": 20.10, "GaussianShader": 21.25, "3DGS-DR": 21.49, "PR-ENDO": 21.90}
+    },
+    "limitations_verbatim": "PR-ENDO offers fast optimization and rendering. However, training time is ~2x longer than for vanilla 3DGS. Our model improves generalization to novel viewpoints and geometries compared to existing methods but still faces challenges with very distant light sources, extreme camera rotations and extreme body deformations. For highly textured tissues, a more complex L_Tissue may be required.",
+    "limitations_note": "The paper reports no quantitative relighting benchmark: it has no per-light-configuration ground truth, so relighting is shown qualitatively (figs 3-5 and the supplementary videos). That gap is exactly what our VR-Caps protocol fills."
+  }
+}
